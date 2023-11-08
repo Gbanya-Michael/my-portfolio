@@ -33,6 +33,17 @@ import bookerBookingsSmall from "../assets/images/bookerBookingsSmall.png";
 import butcherBig from "../assets/images/butcherBig.png";
 import butcherSmall from "../assets/images/butcherSmall.png";
 
+//Community outreach
+import covid1 from "../assets/images/covid1.png";
+import covid2 from "../assets/images/covid2.png";
+import marikina2 from "../assets/images/marikina2.jpeg";
+import marikina3 from "../assets/images/marikina3.jpeg";
+import marikina4 from "../assets/images/marikina4.jpeg";
+import marikina5 from "../assets/images/marikina5.jpeg";
+import saintRita1 from "../assets/images/saintRita1.png";
+import saintRita2 from "../assets/images/saintRita2.png";
+import saintRita3 from "../assets/images/saintRita3.png";
+import saintRita4 from "../assets/images/saintRita4.png";
 export {
   // Background image
   code,
@@ -67,4 +78,16 @@ export {
   bookerBookingsSmall,
   butcherBig,
   butcherSmall,
+
+  //Community outreach
+  covid1,
+  covid2,
+  marikina2,
+  marikina3,
+  marikina4,
+  marikina5,
+  saintRita1,
+  saintRita2,
+  saintRita3,
+  saintRita4,
 };
