@@ -10,7 +10,7 @@ import {
   PhoneIcon,
   GlobeAltIcon,
   ComputerDesktopIcon,
-  ArrowRightIcon,
+  // ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 import { uniformPassport } from "../components/useImage";
 import Header from "./Header";
@@ -61,12 +61,12 @@ function classNames(...classes) {
 export default function SideBar(props) {
   const { content } = props;
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [welcomeNotice, setWelcomeNotice] = useState(true);
-  const [agreed, setAgreed] = useState(false);
+  // const [welcomeNotice, setWelcomeNotice] = useState(true);
+  // const [agreed, setAgreed] = useState(false);
   return (
     <>
       <div>
-        <Transition.Root show={welcomeNotice} as={Fragment}>
+        {/* <Transition.Root show={welcomeNotice} as={Fragment}>
           <Dialog as="div" className="relative z-50  " onClose={setSidebarOpen}>
             <Transition.Child
               as={Fragment}
@@ -148,7 +148,7 @@ export default function SideBar(props) {
               </Transition.Child>
             </div>
           </Dialog>
-        </Transition.Root>
+        </Transition.Root> */}
 
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog
