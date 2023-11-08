@@ -10,6 +10,7 @@ import {
   PhoneIcon,
   GlobeAltIcon,
   ComputerDesktopIcon,
+  ArrowRightIcon,
 } from "@heroicons/react/24/outline";
 import { uniformPassport } from "../components/useImage";
 import Header from "./Header";
@@ -65,7 +66,7 @@ export default function SideBar(props) {
   return (
     <>
       <div>
-        {/* <Transition.Root show={welcomeNotice} as={Fragment}>
+        <Transition.Root show={welcomeNotice} as={Fragment}>
           <Dialog as="div" className="relative z-50  " onClose={setSidebarOpen}>
             <Transition.Child
               as={Fragment}
@@ -147,7 +148,7 @@ export default function SideBar(props) {
               </Transition.Child>
             </div>
           </Dialog>
-        </Transition.Root> */}
+        </Transition.Root>
 
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog

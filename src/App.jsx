@@ -8,6 +8,7 @@ import ContactPage from "./pages/ContactPage";
 import CodehancePage from "./pages/CodehancePage";
 import AroundTheWorldPage from "./pages/AroundTheWorldPage";
 import AboutPage from "./pages/AboutPage";
+import CommunityPage from "./pages/CommunityPage";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/codehance" element={<CodehancePage />} />
         <Route path="/around-the-world" element={<AroundTheWorldPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/community" element={<CommunityPage />} />
       </Routes>
     </BrowserRouter>
   );
