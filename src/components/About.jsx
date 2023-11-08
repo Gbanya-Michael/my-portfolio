@@ -1,4 +1,5 @@
 import React from "react";
+import { personal1 } from "./useImage";
 const sections = [
   {
     id: 1,
@@ -38,21 +39,30 @@ const sections = [
 export default function About() {
   return (
     <>
-      <ol className="  ">
-        {sections.map((section) => (
-          <li
-            key={section.id}
-            className=" my-8 ring-1 ring-gray-100 rounded-md bg-gray-200/10"
-          >
-            <h1 className="mx-3 text-gray-600 mb-2 font-semibold  text-center border-b border-violet-200">
-              {section.title}
-            </h1>
-            <p className="px-3 text-sm md:md text-gray-500 font-normal font-san ">
-              {section.body}
-            </p>
-          </li>
-        ))}
-      </ol>
+      <div className="my-8 flex gap-3">
+        <div className="w-[20rem] h-[25rem]  hidden md:block">
+          <img
+            src={personal1}
+            alt="Image"
+            className="w-full h-full object-contain"
+          />
+        </div>
+        <ol className="md:w-4/5">
+          {sections.map((section) => (
+            <li
+              key={section.id}
+              className="  ring-1 ring-gray-100 rounded-md bg-gray-200/10"
+            >
+              <h1 className="mx-3 text-gray-600 mb-2 font-semibold  text-center border-b border-violet-200">
+                {section.title}
+              </h1>
+              <p className="px-3 text-sm md:md text-gray-500 font-normal font-san ">
+                {section.body}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </>
   );
 }
