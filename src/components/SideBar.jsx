@@ -41,7 +41,7 @@ const navigation = [
 
   {
     name: "Around the world",
-    href: "/downloadCv",
+    href: "/around-the-world",
     icon: GlobeAltIcon,
     current: false,
   },

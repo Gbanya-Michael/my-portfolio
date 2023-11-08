@@ -17,6 +17,7 @@ import waterHigh from "../assets/images/waterHigh.jpeg";
 
 // Personal Images
 import uniformPassport from "../assets/images/uniformPassport.jpeg";
+import waterBackground from "../assets/images/waterBackground.jpeg";
 
 // Projects
 import jobPlusBig from "../assets/images/jobPlusBig.png";
@@ -47,9 +48,11 @@ export {
   figmaLogo,
   cssLogo,
   awsLogo,
-  waterHigh,
+
   // Personal images
   uniformPassport,
+  waterBackground,
+  waterHigh,
 
   // Project Samples
   jobPlusBig,

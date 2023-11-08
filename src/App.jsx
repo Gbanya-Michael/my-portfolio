@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage";
 import DownloadCvPage from "./pages/DownloadCvPage";
 import ContactPage from "./pages/ContactPage";
 import CodehancePage from "./pages/CodehancePage";
+import AroundTheWorldPage from "./pages/AroundTheWorldPage";
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/download-cv" element={<DownloadCvPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/codehance" element={<CodehancePage />} />
+        <Route path="/around-the-world" element={<AroundTheWorldPage />} />
       </Routes>
     </BrowserRouter>
   );
