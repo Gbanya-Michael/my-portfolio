@@ -155,10 +155,10 @@ export default function HomeContent() {
           <h3>
             Profession: <span>Software developer</span>
           </h3>
-          <h5 className="text-xs">
+          <h5 className="text-xs text-gray-600">
             Specialization: <span>Front-end development</span>
           </h5>
-          <h5 className="text-xs">
+          <h5 className="text-xs text-gray-600">
             Location: <span>Sydney, Australia</span>
           </h5>
         </div>
@@ -281,15 +281,21 @@ export default function HomeContent() {
           </div>
           <div className="relative mx-auto max-w-2xl lg:mx-0">
             <h1 className=" text-white mb-3 font-extrabold text-center sm:text-3xl">
-              How I feel about writing code
+              Why I write code
             </h1>
             <figure>
               <blockquote className=" text-xs font-normal text-white md:text-lg md:leading-8">
                 <p>
-                  “Amet amet eget scelerisque tellus sit neque faucibus non
-                  eleifend. Integer eu praesent at a. Ornare arcu gravida
-                  natoque erat et cursus tortor consequat at. Vulputate gravida
-                  sociis enim nullam ultricies habitant malesuada lorem ac.”
+                  I love challenges and writing code challenges me to the core.
+                  <br />
+                  In all the duties I have performed, the challenges are nothing
+                  compared to when I am trying to solve a coding problem. The
+                  best part is when I solve the problem and I could see the
+                  outcome instantly, it gives me maximum satisfaction because I
+                  am always driven by results. To me, writing code is not just
+                  about making income, it is about craftsmanship. Coding and
+                  water sports gives my the same level of adrenaline rush. And
+                  it even feels better because I get paid to write code.
                 </p>
               </blockquote>
               <figcaption className="mt-6 text-base text-white">
