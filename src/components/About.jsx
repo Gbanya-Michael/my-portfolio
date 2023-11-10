@@ -3,36 +3,46 @@ import { personal1 } from "./useImage";
 const sections = [
   {
     id: 1,
-    title: "Abount me",
-    body: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa
-            tempor nec feugiat nisl pretium fusce. At tempor commodo ullamcorper
-            a lacus. Integer feugiat scelerisque varius morbi enim nunc faucibus
-            a pellentesque. Est velit egestas dui id ornare. Vitae auctor eu
-            augue ut. Quis viverra nibh cras pulvinar mattis nunc sed blandit
-            libero. Nisi porta lorem mollis aliquam. In dictum non consectetur
-            a. Ultrices dui sapien eget`,
+    title: "My Software Journey",
+    body: `
+    The desire to build, be innovative and to create is something
+    I cannot sway away from. I have been in other professions but
+     the best decision I ever made was to start my software development journey.
+     Working onboard ship as a licensed deck officer disciplined me in paying attention to details
+     and working with different internal and external teams but it never gave me the opportunity to be innovative
+     because we only follow strict regulations and use equipments made readily available.
+     I shifted focus and took up management and administrative positions. Still, I was not satisfied although these
+     positions allowed me to be innovative and solve problems within the business environment which I did with remarkable achievements.
+     Then I decided to find something that will allow me utilize my natural and acquired skills of
+     being innovative and creative not just problem solving.
+     I realised software development and AI would give me the opportunity
+     to be who I want. I picked up software development with the amazing team
+     at Codehance and it has been incredible from the first day I printed "Hello world" and now working
+     on magnificient projects with advanced code writing skills.
+     Although I intend to futher my studies in the tech and focus on Articial Intelligence and Machine Learning,
+     I am currently happy developing softwares and solving problems in software.
+     `,
   },
   {
     id: 2,
-    title: "Abount me",
-    body: ` Lorem ipsum dolor sit a In massa
-            tempor nec feugiat nisl pretium fusce. At tempor commodo ullamcorper
-            a lacus.scelerisque varius morbi enim nunc faucibus
-            a pellentesque. Est velit egestas dui id ornare. Vitae auctor eu
-            augue ut. Quis viverra nibh cras pulvinar mattis nunc sed blandit
-            libero. Nisi porta lorem mollis aliquam. In dictum non consectetur
-            a. Ultrices dui sapien eget`,
+    title: "Education",
+    body: ` 
+    I started my tertiary education with a Bachelor of Science in marine transportation.
+    There after, I proceeded to Masters in Business Administration. After working in these fields for a while,
+    I transitioned to software development. This was achieved by attending Codehance classesn acquiring knowledge in multiple
+    coding languages and project experiences. These classes are project based
+    and a one-on-one learning system with senior developers who has played vital roles
+    in the software engineering field. Codehance classes use Agile methodology
+    and it encompasses of students from all over the world where we work as teams attending Scrums which prepared
+    us for real life projects.
+    `,
   },
   {
     id: 3,
-    title: "Abount me",
-    body: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna aliqua. In massa
-            tempor nec feugiat nisl pretium fusce. At tempor commodo ullamcorper
-            a lacus. Integer feugiat scelerisque varius morbi enim nunc faucibus
-            a pellentesque. Est velit egestas dui id ornare. Vitae auctor eu
-            augue ut. Quis viverra nibh cras pulvinar mattis nunc sed blandit
-            libero. Nisi porta lorem mollis aliquam. In dictum non consectetur
-            a. Ultrices dui sapien eget`,
+    title: "Language | Exposure | More",
+    body: `My official language for communication is English. I started traveling around the world as a teenager. I have lived, studied and worked in the Philippines,
+    UK and Australia and have also travelled to many other countries as part of exposure.
+    This makes it easy for me to blend in with teams and different cultures.`,
   },
 ];
 
@@ -47,16 +57,16 @@ export default function About() {
             className="w-full h-full object-contain"
           />
         </div>
-        <ol className="md:w-4/5">
+        <ol className="md:w-4/5 mt-1">
           {sections.map((section) => (
             <li
               key={section.id}
-              className="  ring-1 ring-gray-100 rounded-md bg-gray-200/10"
+              className=" mb-10 ring-1 ring-gray-200 rounded-md bg-white shadow-2xl"
             >
-              <h1 className="mx-3 text-gray-600 mb-2 font-semibold  text-center border-b border-violet-200">
+              <h1 className="mx-3 py-2 text-gray-600 mb-2 font-semibold  text-center border-b border-violet-200">
                 {section.title}
               </h1>
-              <p className="px-3 text-sm md:md text-gray-500 font-normal font-san ">
+              <p className="px-3 pb-3 text-sm md:md text-gray-500 font-san ">
                 {section.body}
               </p>
             </li>
