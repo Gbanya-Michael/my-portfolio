@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import {
@@ -29,6 +30,7 @@ import {
   butcherBig,
   butcherSmall,
 } from "../components/useImage";
+
 const skills = [
   {
     id: 1,
@@ -288,14 +290,17 @@ export default function HomeContent() {
                 <p>
                   I love challenges and writing code challenges me to the core.
                   <br />
-                  In all the duties I have performed, the challenges are nothing
-                  compared to when I am trying to solve a coding problem. The
-                  best part is when I solve the problem and I could see the
-                  outcome instantly, it gives me maximum satisfaction because I
-                  am always driven by results. To me, writing code is not just
-                  about making income, it is about craftsmanship. Coding and
-                  water sports gives my the same level of adrenaline rush. And
-                  it even feels better because I get paid to write code.
+                  In all the duties I have performed, the challenges I encounter
+                  while writing code brings out the best problem solving and
+                  creative skills in me. The most amazing part is when I solve
+                  the problem and I could see the outcome instantly, it gives me
+                  maximum satisfaction because I am always driven by results. To
+                  me, writing code is not just about making income, it is about
+                  craftsmanship and a craftman must master his craft as I have
+                  mastered the art of creating user friendly and stunning web
+                  apps. Coding and water sports gives me the same level of
+                  adrenaline rush. And it even feels better because I get paid
+                  to write code.
                 </p>
               </blockquote>
               <figcaption className="mt-6 text-base text-white">
@@ -322,17 +327,19 @@ export default function HomeContent() {
 
         <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5 flex-shrink-0 ">
           {skills.map((skill) => (
-            <li
-              key={skill.id}
-              className="bg-violet-500/10 w-24 rounded-lg h-18 p-2 flex-col flex-shrink-0 "
-            >
-              <img
-                className="max-h-12 md:max-h-full w-full object-contain  mb-2"
-                src={skill.img}
-                alt="Logo images"
-              />
-              <p className=" text-sm text-center ">{skill.title}</p>
-            </li>
+            <Link to="/project-details">
+              <li
+                key={skill.id}
+                className="bg-violet-500/10 w-24 rounded-lg h-18 p-2 flex-col flex-shrink-0 "
+              >
+                <img
+                  className="max-h-12 md:max-h-full w-full object-contain  mb-2"
+                  src={skill.img}
+                  alt="Logo images"
+                />
+                <p className=" text-sm text-center ">{skill.title}</p>
+              </li>
+            </Link>
           ))}
         </ul>
       </div>
