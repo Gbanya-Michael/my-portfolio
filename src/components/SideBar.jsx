@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import {
@@ -123,8 +123,8 @@ export default function SideBar(props) {
                         <ul role="list" className="-mx-2 mt-2 space-y-1">
                           {navigation.map((item) => (
                             <li key={item.name}>
-                              <a
-                                href={item.href}
+                              <Link
+                                to={item.href}
                                 className={classNames(
                                   item.current
                                     ? "bg-violet-700 text-white"
@@ -142,7 +142,7 @@ export default function SideBar(props) {
                                   aria-hidden="true"
                                 />
                                 {item.name}
-                              </a>
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -209,8 +209,9 @@ export default function SideBar(props) {
             <span className="sr-only">Open sidebar</span>
             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
           </button>
+
           <div className="flex-1 text-sm font-semibold leading-6 text-white">
-            Home
+            <Link to="/">Home</Link>
           </div>
 
           <img
