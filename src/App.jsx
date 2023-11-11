@@ -9,7 +9,7 @@ import CodehancePage from "./pages/CodehancePage";
 import AroundTheWorldPage from "./pages/AroundTheWorldPage";
 import AboutPage from "./pages/AboutPage";
 import CommunityPage from "./pages/CommunityPage";
-
+import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +21,7 @@ function App() {
         <Route path="/around-the-world" element={<AroundTheWorldPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/community" element={<CommunityPage />} />
+        <Route path="/project-details" element={<ProjectDetailsPage />} />
       </Routes>
     </BrowserRouter>
   );

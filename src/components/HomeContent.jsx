@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import { Link } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import {
@@ -90,14 +89,14 @@ const skills = [
   },
 ];
 
-const sampleProjects = [
+export const sampleProjects = [
   {
     id: 1,
     title: "JobPlus",
     description:
       "Lorem ipsum dolor sit amet,  labore et dolore magna aliqua. Amet aliqua id diam maecenas ultricies mi eget mauris.",
     bigScreenImg: jobPlusBig,
-    smallSreenImg: jobPlusSmall,
+    smallScreenImg: jobPlusSmall,
   },
   {
     id: 2,
@@ -105,28 +104,28 @@ const sampleProjects = [
     description:
       "Lorem ipsum dolor sit amet,  maecenas ultricies mi eget mauris.",
     bigScreenImg: bookerDashBig,
-    smallSreenImg: bookerDashSmall,
+    smallScreenImg: bookerDashSmall,
   },
   {
     id: 3,
     title: "bookerBuddy",
     description: "The Finance section for for businesses",
     bigScreenImg: bookerFinBig,
-    smallSreenImg: bookerFinSmall,
+    smallScreenImg: bookerFinSmall,
   },
   {
     id: 4,
     title: "bookerBuddy",
     description: "Home section for users on bookerBuddy",
     bigScreenImg: bookerHomeBig,
-    smallSreenImg: bookerHomeSmall,
+    smallScreenImg: bookerHomeSmall,
   },
   {
     id: 5,
     title: "bookerBuddy",
     description: "Booking history for businesses",
     bigScreenImg: bookerBookingsBig,
-    smallSreenImg: bookerBookingsSmall,
+    smallScreenImg: bookerBookingsSmall,
   },
   {
     id: 6,
@@ -134,7 +133,7 @@ const sampleProjects = [
     description:
       "Lorem ipsum dolor sit amet, consectetur  magna aliqua. Amet aliqua id diam maecenas ultricies mi eget mauris.",
     bigScreenImg: butcherBig,
-    smallSreenImg: butcherSmall,
+    smallScreenImg: butcherSmall,
   },
 ];
 export default function HomeContent() {
@@ -327,19 +326,17 @@ export default function HomeContent() {
 
         <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5 flex-shrink-0 ">
           {skills.map((skill) => (
-            <Link to="/project-details">
-              <li
-                key={skill.id}
-                className="bg-violet-500/10 w-24 rounded-lg h-18 p-2 flex-col flex-shrink-0 "
-              >
-                <img
-                  className="max-h-12 md:max-h-full w-full object-contain  mb-2"
-                  src={skill.img}
-                  alt="Logo images"
-                />
-                <p className=" text-sm text-center ">{skill.title}</p>
-              </li>
-            </Link>
+            <li
+              key={skill.id}
+              className="bg-violet-500/10 w-24 rounded-lg h-18 p-2 flex-col flex-shrink-0 "
+            >
+              <img
+                className="max-h-12 md:max-h-full w-full object-contain  mb-2"
+                src={skill.img}
+                alt="Logo images"
+              />
+              <p className=" text-sm text-center ">{skill.title}</p>
+            </li>
           ))}
         </ul>
       </div>
@@ -359,7 +356,7 @@ export default function HomeContent() {
                 <div className="flex justify-between items-baseline gap-1 mb-8">
                   <div className="w-1/3 h-[10rem] flex-shrink-0">
                     <img
-                      src={project.smallSreenImg}
+                      src={project.smallScreenImg}
                       alt="Screenshot"
                       className="w-full h-full object-contain"
                     />
