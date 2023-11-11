@@ -19,17 +19,31 @@ const sections = [
      to be who I want. I picked up software development with the amazing team
      at Codehance and it has been incredible from the first day I printed "Hello world" and now working
      on magnificient projects with advanced code writing skills.
-     Although I intend to futher my studies in the tech and focus on Articial Intelligence and Machine Learning,
-     I am currently happy developing softwares and solving problems in software.
+     Although I intend to futher my studies in tech and add Articial Intelligence and Machine Learning
+     to my portfolio,
+     I am currently happy developing softwares and solving problems within the development environment.
      `,
   },
   {
     id: 2,
+    title: "My Code Writing Skills",
+    body: ` 
+   Over the time, I have mastered the art of writing neat, beautiful and scalable code.
+   I use the D.R.Y method to modify code. D.R.Y simply means "Do not Repeat Yourself"
+   This method allows me create components and custom hooks that can be reused in the entire project
+  thereby making code easily scalable and development process becomes super efficient.s
+
+
+
+    `,
+  },
+  {
+    id: 3,
     title: "Education",
     body: ` 
     I started my tertiary education with a Bachelor of Science in marine transportation.
     There after, I proceeded to Masters in Business Administration. After working in these fields for a while,
-    I transitioned to software development. This was achieved by attending Codehance classesn acquiring knowledge in multiple
+    I transitioned to software development. This was achieved by attending Codehance classes acquiring knowledge in multiple
     coding languages and project experiences. These classes are project based
     and a one-on-one learning system with senior developers who has played vital roles
     in the software engineering field. Codehance classes use Agile methodology
@@ -37,12 +51,13 @@ const sections = [
     us for real life projects.
     `,
   },
+
   {
-    id: 3,
+    id: 4,
     title: "Language | Exposure | More",
-    body: `My official language for communication is English. I started traveling around the world as a teenager. I have lived, studied and worked in the Philippines,
-    UK and Australia and have also travelled to many other countries as part of exposure.
-    This makes it easy for me to blend in with teams and different cultures.`,
+    body: `My official language for communication is English. I started traveling around the world in my teeanage years. I have lived, studied and worked in the Philippines,
+    UK and Australia and have also travelled to many other countries.
+    This makes it easy for me to blend in with teams from different cultures.`,
   },
 ];
 
