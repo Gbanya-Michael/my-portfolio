@@ -30,8 +30,8 @@ const sections = [
     body: ` 
    Over the time, I have mastered the art of writing neat, beautiful and scalable code.
    I use the D.R.Y method to modify code. D.R.Y simply means "Do not Repeat Yourself"
-   This method allows me create components and custom hooks that can be reused in the entire project
-  thereby making code easily scalable and development process becomes super efficient.s
+   This method allows to me create components and custom hooks that can be reused in the entire project
+  thereby making code easily scalable and development process becomes super efficient.
 
 
 
