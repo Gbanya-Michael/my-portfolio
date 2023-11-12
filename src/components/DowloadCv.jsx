@@ -5,11 +5,15 @@ import { ArrowDownIcon } from "@heroicons/react/24/outline";
 const downloadTandC = [
   {
     id: 1,
-    item: "The purpose of accessing my portfolio or downloading my CV is strictly for business. Such as, employment, contracts, refferal, gigs, partnership.",
+    item: "By downloading my CV, you agree that the details contained in the document shall only be used for legal purposes such as  employment, contracts, refferal, gigs, partnership.",
   },
   {
     id: 2,
-    item: "Any information contained in my cv shall be used for legal purposes only.",
+    item: "If for any reason, my deatils are used outside the scope mentioned above without informing me, I shall take legal action against such person.",
+  },
+  {
+    id: 3,
+    item: "You agree to contact me for consent before sharing my data with any other party.",
   },
 ];
 // CV links
@@ -33,7 +37,7 @@ export default function DownloadCv() {
       setDownloadMessage(
         `PDF document downloaded successfully. Please check your download folder with file name ${customNamePDF}`
       );
-    } else ""; // Is this necessary?
+    } else "";
   };
   return (
     <>
