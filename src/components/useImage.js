@@ -1,4 +1,3 @@
-// Background
 import code from "../assets/images/code.png";
 
 // Skills Images
@@ -13,6 +12,9 @@ import gitLogo from "../assets/images/gitLogo.png";
 import figmaLogo from "../assets/images/figmaLogo.png";
 import cssLogo from "../assets/images/cssLogo.png";
 import awsLogo from "../assets/images/awsLogo.png";
+import sqLite from "../assets/images/sqLite.png";
+import slack from "../assets/images/slack.png";
+import graphQL from "../assets/images/graphQL.png";
 import waterHigh from "../assets/images/waterHigh.jpeg";
 
 // Personal Images
@@ -60,6 +62,9 @@ export {
   figmaLogo,
   cssLogo,
   awsLogo,
+  slack,
+  sqLite,
+  graphQL,
 
   // Personal images
   uniformPassport,

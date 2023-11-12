@@ -14,6 +14,8 @@ import {
   figmaLogo,
   cssLogo,
   awsLogo,
+  sqLite,
+  graphQL,
   waterHigh,
   uniformPassport,
   jobPlusBig,
@@ -87,8 +89,37 @@ const skills = [
     img: cssLogo,
     title: "CSS",
   },
+  {
+    id: 13,
+    img: graphQL,
+    title: "GraphQL",
+  },
+  {
+    id: 15,
+    img: sqLite,
+    title: "SQLite",
+  },
 ];
 
+const terms = [
+  {
+    paragraph:
+      "Only tech employers, recruiters, contractors, freelancers, software developers and other tech related persons are allowed to access this website. ",
+  },
+  {
+    paragraph:
+      "The sole purpose of this website is to familiarise people about me and my craft.",
+  },
+  {
+    paragraph:
+      "The contents on this website shall be used for legal purposes only.",
+  },
+
+  {
+    paragraph:
+      "By continuing, you agree that my details, including images and documents will not be used without seeking my consent.",
+  },
+];
 export const sampleProjects = [
   {
     id: 1,
@@ -203,20 +234,23 @@ export default function HomeContent() {
                   leaveFrom="opacity-100"
                   leaveTo="opacity-0"
                 >
-                  <div className="overflow-scrool max-w-[22rem] md:max-w-[40rem] mx-auto h-fit rounded-sm absolute bg-violet-200 top-40 bottom-0 right-0 left-0">
+                  <div className=" px-5 max-w-[22rem] md:max-w-[40rem] mx-auto h-fit rounded-sm absolute bg-violet-200 top-40 bottom-0 right-0 left-0">
                     <p className="sr-only">Welcome notice</p>
-                    <h1 className="text-red-700 font-semibold px-5 py-5 text-center text-2xl leading-6">
+                    <h1 className="text-red-700 font-semibold px-5 pt-5 text-center text-2xl leading-6">
                       Terms of use
                     </h1>
-                    <p className=" text-gray-500 font-thin px-5 pb-5 text-sm md:text-lg leading-6">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Vitae tempus quam pellentesque nec. Blandit libero
-                      volutpat sed cras. Erat imperdiet sed euismod nisi porta
-                      lorem mollis. Nullam eget felis eget nunc lobortis mattis
-                      aliquam.
-                    </p>
-                    <div className="px-5 gap-2 flex h-6 items-center mb-5">
+                    <ul className=" pl-5 text-gray-900 font-thin pb-5 text-sm md:text-lg leading-4 list-disc list-outside">
+                      {terms.map((term) => (
+                        <li key={term.paragraph} className="mt-2">
+                          {term.paragraph}
+                        </li>
+                      ))}
+                      <p className="text-xs mt-2">
+                        Check the box below to continue.
+                      </p>
+                    </ul>
+
+                    <div className="gap-2 flex h-6 items-center mb-5">
                       <input
                         id="confirmation"
                         aria-describedby="notice-confirmation"
@@ -287,7 +321,7 @@ export default function HomeContent() {
           </div>
           <div className="relative mx-auto max-w-2xl lg:mx-0">
             <h1 className=" text-white mb-3 font-extrabold text-center sm:text-3xl">
-              Why I write code
+              Why I Write Code
             </h1>
             <figure>
               <blockquote className=" text-xs font-normal text-white md:text-lg md:leading-8">
@@ -326,7 +360,7 @@ export default function HomeContent() {
 
       <div className=" my-20  ">
         <h2 className="bg-violet-500 rounded-3xl text-center text-lg font-semibold leading-8 text-white">
-          My skills
+          My Skills and Tools
         </h2>
 
         <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5 flex-shrink-0 ">
@@ -348,7 +382,7 @@ export default function HomeContent() {
 
       <div className="mt-8">
         <h2 className="bg-violet-500 rounded-3xl text-center text-lg font-semibold leading-8 text-white">
-          Sample projects
+          Sample Projects
         </h2>
         <p className="text-center text-xs text-gray-600">
           The projects displayed below are samples only which are extracted from
