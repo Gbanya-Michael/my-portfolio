@@ -155,7 +155,10 @@ export default function HomeContent() {
           />
         </div>
         <div className="mt-3 text-center">
-          <h3>
+          <h1 className="text-gray-900">
+            Name: <span>Michael Gbanya</span>
+          </h1>
+          <h3 className="text-xs text-gray-600">
             Profession: <span>Software developer</span>
           </h3>
           <h5 className="text-xs text-gray-600">
@@ -347,6 +350,10 @@ export default function HomeContent() {
         <h2 className="bg-violet-500 rounded-3xl text-center text-lg font-semibold leading-8 text-white">
           Sample projects
         </h2>
+        <p className="text-center text-xs text-gray-600">
+          The projects displayed below are samples only which are extracted from
+          the main project and not the complete projects.
+        </p>
 
         <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5">
           {sampleProjects.map((project) => (
