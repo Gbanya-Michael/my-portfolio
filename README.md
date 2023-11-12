@@ -3,7 +3,11 @@
 This is portfolio project.
 If you are cloning to reuse, please ensure to change all the personal details.
 
+<<<<<<< HEAD
 # Installation
+=======
+
+>>>>>>> 59a341c23e1bda62effabe98d725924e98d31109
 
 On your terminal:
 
