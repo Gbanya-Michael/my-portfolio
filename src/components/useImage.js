@@ -15,6 +15,7 @@ import awsLogo from "../assets/images/awsLogo.png";
 import sqLite from "../assets/images/sqLite.png";
 import slack from "../assets/images/slack.png";
 import graphQL from "../assets/images/graphQL.png";
+import linkedIn from "../assets/images/linkedIn.png";
 import waterHigh from "../assets/images/waterHigh.jpeg";
 
 // Personal Images
@@ -48,6 +49,7 @@ import saintRita2 from "../assets/images/saintRita2.png";
 import saintRita3 from "../assets/images/saintRita3.png";
 import saintRita4 from "../assets/images/saintRita4.png";
 export {
+  linkedIn,
   // Background image
   code,
   // Skills images
