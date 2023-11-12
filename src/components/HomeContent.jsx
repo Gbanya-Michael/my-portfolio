@@ -94,7 +94,7 @@ export const sampleProjects = [
     id: 1,
     title: "JobPlus",
     description:
-      "Lorem ipsum dolor sit amet,  labore et dolore magna aliqua. Amet aliqua id diam maecenas ultricies mi eget mauris.",
+      "JobPlus is an online job search engine I created that gathers lists of jobs from job websites and update the data base. The website allows users to register, apply for jobs, save jobs and search for jobs based on preferences and filters. The UI, UX, layouts, database, CMS were created by me. ",
     bigScreenImg: jobPlusBig,
     smallScreenImg: jobPlusSmall,
   },
@@ -102,28 +102,30 @@ export const sampleProjects = [
     id: 2,
     title: "bookerBuddy",
     description:
-      "Lorem ipsum dolor sit amet,  maecenas ultricies mi eget mauris.",
+      "This is an e-commerce online appointment booking software for the beauty and lifestyle industry. The software boasts of a marketplace that allows different businesses to host individual stores. Each store has their own CMS allowing store owners to manage services, customers and other features. The store is integrated with google geolocation API that automatically display stores and services around a particular user location. The store enables online bookings and payment.",
     bigScreenImg: bookerDashBig,
     smallScreenImg: bookerDashSmall,
   },
   {
     id: 3,
     title: "bookerBuddy",
-    description: "The Finance section for for businesses",
+    description:
+      "This is the finance section for stores on bookerBuddy. Businesses can track payments easily from the finace section in the admin. Payment tracking is programmed to update authomatically. Receipts are also generated authomatically.",
     bigScreenImg: bookerFinBig,
     smallScreenImg: bookerFinSmall,
   },
   {
     id: 4,
     title: "bookerBuddy",
-    description: "Home section for users on bookerBuddy",
+    description: `Home screen for users on bookerBuddy. The software authomatically detects user location and display services around the user in diffrent categories, such as "Top rated stores" and "Most visited places"`,
     bigScreenImg: bookerHomeBig,
     smallScreenImg: bookerHomeSmall,
   },
   {
     id: 5,
     title: "bookerBuddy",
-    description: "Booking history for businesses",
+    description:
+      "bookerBuddy maintains a booking history for businesses, this is also applied to the users. Businesses can revisit activities and bookings overtime on the history page. It has added features for filters and sort by date which promotes a fast and efficient way too navigate activities.",
     bigScreenImg: bookerBookingsBig,
     smallScreenImg: bookerBookingsSmall,
   },
@@ -131,7 +133,7 @@ export const sampleProjects = [
     id: 6,
     title: "Butcher App",
     description:
-      "Lorem ipsum dolor sit amet, consectetur  magna aliqua. Amet aliqua id diam maecenas ultricies mi eget mauris.",
+      "Meat Fresh is a software created for a meat delivery business. The software allows the owner to manage products, data, and content. Users can go to the website and search for products, order for products, pay for products and give ratings",
     bigScreenImg: butcherBig,
     smallScreenImg: butcherSmall,
   },
