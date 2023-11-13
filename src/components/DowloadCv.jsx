@@ -17,8 +17,8 @@ const downloadTandC = [
   },
 ];
 // CV links
-const CV_PDF_LINK = "/GMichael_CV.pdf";
-const CV_WORD_LINK = "/GMichael_CV.docx";
+const CV_PDF_LINK = "/Michael-Gbanya-CV.pdf";
+const CV_WORD_LINK = "/Michael-Gbanya-CV.docx";
 
 const customNameWord = "Michael-Gbanya-CV.docx";
 const customNamePDF = "Michael-Gbanya-CV.pdf";
