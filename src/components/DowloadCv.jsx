@@ -5,11 +5,11 @@ import { ArrowDownIcon } from "@heroicons/react/24/outline";
 const downloadTandC = [
   {
     id: 1,
-    item: "By downloading my CV, you agree that the details contained in the document shall only be used for legal purposes such as  employment, contracts, refferal, gigs, partnership.",
+    item: "By downloading my CV, you agree that the details contained in the document shall only be used for legal purposes such as  employment, contracts, referral, gigs, partnership.",
   },
   {
     id: 2,
-    item: "If for any reason, my deatils are used outside the scope mentioned above without informing me, I shall take legal action against such person.",
+    item: "If for any reason, my details are used outside the scope mentioned above without informing me, I shall take legal action against such person.",
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ export default function DownloadCv() {
         </div>
         <ol className=" list-disc mt-5  ">
           {downloadTandC.map((terms) => (
-            <li key={terms.id} className="ml-5 text-gray-600">
+            <li key={terms.id} className="ml-5 mt-2 text-gray-600">
               {terms.item}
             </li>
           ))}
