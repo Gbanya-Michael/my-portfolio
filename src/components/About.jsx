@@ -1,4 +1,5 @@
 import React from "react";
+import "animate.css";
 import { personal1 } from "./useImage";
 const sections = [
   {
@@ -65,7 +66,7 @@ export default function About() {
   return (
     <>
       <div className="my-8 flex gap-3">
-        <div className="w-[20rem] h-[25rem]  hidden md:block">
+        <div className="w-[20rem] h-[25rem]  hidden md:block animate__animated animate__rollIn">
           <img
             src={personal1}
             alt="Image"
