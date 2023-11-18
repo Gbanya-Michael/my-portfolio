@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import { Link } from "react-router-dom";
 import "animate.css";
 import { Dialog, Transition } from "@headlessui/react";
 import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/outline";
@@ -225,8 +226,7 @@ export const sampleProjects = [
 export default function HomeContent() {
   const [welcomeNotice, setWelcomeNotice] = useState(true);
   const [agreed, setAgreed] = useState(false);
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [bigScreenOpen, setBigScreenOPen] = useState(false);
+
   const updatedProjects = sampleProjects.map((project) => ({
     ...project,
     isTruncated: true,
@@ -241,13 +241,6 @@ export default function HomeContent() {
     return truncated + "...";
   };
 
-  const handleSelectedProject = (project) => {
-    setSelectedProject(project);
-    setBigScreenOPen(true);
-  };
-  const hideSelectedProject = () => {
-    setBigScreenOPen(false);
-  };
   return (
     <>
       <main className="relative">
@@ -468,96 +461,43 @@ export default function HomeContent() {
 
           <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5">
             {sampleProjects.map((project) => (
-              <li
-                key={project.id}
-                className=" p-5 bg-gray-400/10 w-screen md:w-[30rem] rounded-sm  flex-shrink-0 "
-              >
-                <div className=" md:text-lg text-center text-gray-600 leading-3">
-                  <div className="flex justify-between items-baseline gap-1 mb-8">
-                    <div className="w-1/3 h-[10rem] flex-shrink-0">
-                      <img
-                        src={project.smallScreenImg}
-                        alt="Screenshot"
-                        className="w-full h-full object-contain"
-                      />
-                      <p className="mt-1 text-xs">Small screen</p>
+              <Link to={`/project-details/${project.id}`} key={project.id}>
+                <li className=" p-5 bg-gray-400/10 w-screen md:w-[30rem] rounded-sm  flex-shrink-0 ">
+                  <div className=" md:text-lg text-center text-gray-600 leading-3">
+                    <div className="flex justify-between items-baseline gap-1 mb-8">
+                      <div className="w-1/3 h-[10rem] flex-shrink-0">
+                        <img
+                          src={project.smallScreenImg}
+                          alt="Screenshot"
+                          className="w-full h-full object-contain"
+                        />
+                        <p className="mt-1 text-xs">Small screen</p>
+                      </div>
+                      <div className="w-2/3 h-[10rem] flex-shrink-0 ">
+                        <img
+                          src={project.bigScreenImg}
+                          alt="Screenshot"
+                          className="w-full object-contain"
+                        />
+                        <p className="mt-1 text-xs">Large screen</p>
+                      </div>
                     </div>
-                    <div className="w-2/3 h-[10rem] flex-shrink-0 ">
-                      <img
-                        src={project.bigScreenImg}
-                        alt="Screenshot"
-                        className="w-full object-contain"
-                      />
-                      <p className="mt-1 text-xs">Large screen</p>
-                    </div>
-                  </div>
 
-                  <p className="text-gray-600">Project name: {project.title}</p>
-                  <p className="text-start font-light text-sm">
-                    {truncate(project.description, project.id)}
-                    <span
-                      className="text-blue-500 cursor-pointer"
-                      onClick={() => handleSelectedProject(project)}
-                    >
-                      See more
-                    </span>
-                  </p>
-                </div>
-              </li>
+                    <p className="text-gray-600">
+                      Project name: {project.title}
+                    </p>
+                    <p className="text-start font-light text-sm">
+                      {truncate(project.description, project.id)}
+                      <span className="text-blue-500 cursor-pointer">
+                        See more
+                      </span>
+                    </p>
+                  </div>
+                </li>
+              </Link>
             ))}
           </ul>
         </div>
-        {bigScreenOpen && (
-          <div className=" bg-gray-900 absolute px-3 md:px-20 top-0 bottom-10 grid justify-center md:content-center">
-            <button
-              onClick={hideSelectedProject}
-              className=" text-white flex gap-2 items-center h-fit w-fit px-3 rounded-md bg-violet-900/100"
-            >
-              <ArrowLeftIcon className="w-4 h-4" /> Back
-            </button>
-            <div className=" md:text-lg text-center text-white leading-3">
-              <div className=" mt-10 mb-8  pb-10 md:flex  gap-10 border-b-8">
-                <div className=" w-full">
-                  <h1 className="md:text-xl mb-5 mb:my-16 text-start">
-                    Project name: {selectedProject.title}
-                  </h1>
-                  <p className="text-start text-sm md:text-md text-white/80 mb-5 ">
-                    {selectedProject?.description}
-                  </p>
-                  <div>
-                    <p className="text-start">Technologies used:</p>
-                    <ul className="flex flex-wrap gap-3 my-5">
-                      {selectedProject.technology.map((tech) => (
-                        <li
-                          className="w-fit px-3 py-1 rounded-full  bg-violet-900/100"
-                          key={tech.name}
-                        >
-                          {tech.name}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div>
-                  <img
-                    src={selectedProject?.smallScreenImg}
-                    alt="Screenshot"
-                    className="w-full h-full object-contain"
-                  />
-                  <p className="mt-1 text-xs">Small screen</p>
-                </div>
-              </div>
-              <div className="h-fit w-fit">
-                <img
-                  src={selectedProject?.bigScreenImg}
-                  alt="Screenshot"
-                  className="w-full h-full object-contain"
-                />
-                <p className="mt-1 text-xs">Large screen</p>
-              </div>
-            </div>
-          </div>
-        )}
       </main>
     </>
   );

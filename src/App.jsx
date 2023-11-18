@@ -21,7 +21,7 @@ function App() {
         <Route path="/around-the-world" element={<AroundTheWorldPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/community" element={<CommunityPage />} />
-        <Route path="/project-details" element={<ProjectDetailsPage />} />
+        <Route path="/project-details/:id" element={<ProjectDetailsPage />} />
       </Routes>
     </BrowserRouter>
   );
