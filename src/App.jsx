@@ -11,17 +11,20 @@ import AboutPage from "./pages/AboutPage";
 import CommunityPage from "./pages/CommunityPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import PrivateRoute from "./components/PrivateRoute";
+import EntryTerms from "./components/EntryTerms";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/entry-terms" element={<EntryTerms />} />
 
         <Route
           path="/*"
           element={
             <PrivateRoute>
-              <Route>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+
                 <Route path="/download-cv" element={<DownloadCvPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/codehance" element={<CodehancePage />} />
@@ -35,7 +38,7 @@ function App() {
                   path="/project-details/:id"
                   element={<ProjectDetailsPage />}
                 />
-              </Route>
+              </Routes>
             </PrivateRoute>
           }
         />
