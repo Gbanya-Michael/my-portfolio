@@ -4,8 +4,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { code } from "./useImage";
 import { useSessionStorage } from "./useSessionStorage";
 import { useNavigate } from "react-router-dom";
-
-const { getSessionStorage, saveSessionStorage } = useSessionStorage();
+import { useStorage } from "../StorageContext";
 const terms = [
   {
     paragraph:
@@ -29,8 +28,10 @@ const terms = [
 export default function EntryTerms() {
   const [welcomeNotice, setWelcomeNotice] = useState(true);
   const [agreed, setAgreed] = useState(false);
+  const { getSessionStorage, saveSessionStorage } = useSessionStorage();
 
   const navigate = useNavigate();
+  const { setIsAllowed } = useStorage();
 
   useEffect(() => {
     const hasAgreed = getSessionStorage();
@@ -43,6 +44,7 @@ export default function EntryTerms() {
     saveSessionStorage();
     setAgreed(true);
     setWelcomeNotice(false);
+    setIsAllowed(true);
     navigate("/");
   };
 

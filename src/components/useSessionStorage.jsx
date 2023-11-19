@@ -1,10 +1,13 @@
+const STORAGE_KEY = "Software Developer";
+const STORAGE_NAME = "michaelportfolio";
+
 export const useSessionStorage = () => {
   const getSessionStorage = () => {
-    return sessionStorage.getItem("Software Developer") === "michaelportfolio";
+    return sessionStorage.getItem(STORAGE_KEY) === STORAGE_NAME;
   };
 
   const saveSessionStorage = () => {
-    sessionStorage.setItem("Software Developer", "michaelportfolio");
+    sessionStorage.setItem(STORAGE_KEY, STORAGE_NAME);
   };
 
   return {

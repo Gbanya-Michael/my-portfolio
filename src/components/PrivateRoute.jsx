@@ -1,11 +1,11 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useSessionStorage } from "./useSessionStorage";
+import { useStorage } from "../StorageContext";
 
 export default function PrivateRoute({ children }) {
-  const { getSessionStorage } = useSessionStorage();
-  const agreedToTerms = getSessionStorage();
-  if (!agreedToTerms) {
+  const { isAllowed } = useStorage();
+
+  if (!isAllowed) {
     return <Navigate to="/entry-terms" />;
   }
   return children;
