@@ -22,6 +22,7 @@ import waterHigh from "../assets/images/waterHigh.jpeg";
 import uniformPassport from "../assets/images/uniformPassport.jpeg";
 import waterBackground from "../assets/images/waterBackground.jpeg";
 import personal1 from "../assets/images/personal1.jpeg";
+import profilePhoto from "../assets/images/profilePhoto.jpeg";
 
 // Projects
 import jobPlusBig from "../assets/images/jobPlusBig.png";
@@ -48,6 +49,7 @@ import saintRita1 from "../assets/images/saintRita1.png";
 import saintRita2 from "../assets/images/saintRita2.png";
 import saintRita3 from "../assets/images/saintRita3.png";
 import saintRita4 from "../assets/images/saintRita4.png";
+
 export {
   linkedIn,
   // Background image
@@ -73,6 +75,7 @@ export {
   waterBackground,
   waterHigh,
   personal1,
+  profilePhoto,
 
   // Project Samples
   jobPlusBig,

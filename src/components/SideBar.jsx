@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
@@ -17,40 +17,35 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 const navigation = [
-  { name: "Home", href: "/", icon: HomeIcon, current: true },
-  { name: "About me", href: "/about", icon: UserIcon, current: false },
+  { name: "Home", href: "/", icon: HomeIcon },
+  { name: "About me", href: "/about", icon: UserIcon },
   {
     name: "Community",
     href: "/community",
     icon: UserGroupIcon,
-    current: false,
   },
 
   {
     name: "Contact me",
     href: "/contact",
     icon: PhoneIcon,
-    current: false,
   },
 
   {
     name: "Download my CV",
     href: "/download-cv",
     icon: DocumentTextIcon,
-    current: false,
   },
 
   {
     name: "Around the world",
     href: "/around-the-world",
     icon: GlobeAltIcon,
-    current: false,
   },
   {
     name: "About Codehance",
     href: "/codehance",
     icon: ComputerDesktopIcon,
-    current: false,
   },
 ];
 
@@ -61,7 +56,12 @@ function classNames(...classes) {
 export default function SideBar(props) {
   const { content } = props;
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [currentItem, setCurrentItem] = useState(null);
+  const location = useLocation();
 
+  useEffect(() => {
+    setCurrentItem(location.pathname);
+  }, [location.pathname]);
   return (
     <>
       <div>
@@ -165,7 +165,7 @@ export default function SideBar(props) {
                       <Link
                         to={item.href}
                         className={classNames(
-                          item.current
+                          currentItem === item.href
                             ? "bg-violet-700 text-white"
                             : "text-violet-200 hover:text-white hover:bg-violet-700",
                           "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
@@ -173,7 +173,7 @@ export default function SideBar(props) {
                       >
                         <item.icon
                           className={classNames(
-                            item.current
+                            currentItem === item.href
                               ? "text-white"
                               : "text-violet-200 group-hover:text-white",
                             "h-6 w-6 shrink-0"
