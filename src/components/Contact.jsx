@@ -10,7 +10,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className=" mb-72 pt-40 md:mb-[25rem] text-sm md:text-lg max-w-xl mx-auto">
+      <div className=" mb-72 pt-10 md:mb-[25rem] text-sm md:text-lg max-w-xl mx-auto">
         <div className="mx-3">
           <p>Thank you for wanting to contact me.</p>
           <p>
@@ -25,7 +25,7 @@ export default function Contact() {
               showDownloadSect
                 ? "bg-violet-600/90 hover:bg-violet-400"
                 : "bg-red-600/90 hover:bg-red-400"
-            } my-5 ml-3 text-white p-2 md:p-3 rounded-lg w-fit font-semibold`}
+            } mt-5 ml-3 text-white p-2 md:p-3 rounded-lg w-fit font-semibold`}
           >
             {showDownloadSect ? "Download CV" : "Cancel download"}
           </button>
