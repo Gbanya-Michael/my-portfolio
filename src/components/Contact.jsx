@@ -10,7 +10,7 @@ export default function Contact() {
 
   return (
     <>
-      <div className=" mb-[70rem] text-sm md:text-lg ">
+      <div className=" mb-72 md:mb-[25rem] text-sm md:text-lg max-w-xl mx-auto">
         <div className="mx-3">
           <p>Thank you for wanting to contact me.</p>
           <p>
