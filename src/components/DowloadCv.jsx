@@ -41,7 +41,7 @@ export default function DownloadCv() {
   };
   return (
     <>
-      <div className="px-3 relative mb-[70rem] text-sm md:text-lg">
+      <div className="px-3 relative mb-[70rem] text-sm md:text-lg max-w-2xl mx-auto">
         <div className="text-gray-600  ">
           Hello there! I believe you have interest in working with me as you
           have considered downloading my CV. Please read the terms and agree by
@@ -78,7 +78,11 @@ export default function DownloadCv() {
                 </Link>
               </div>
             )}
-            <div className=" max-w-sm  flex justify-between gap-2 ">
+            <div
+              className=" max-w-sm  flex justify-between gap-2
+            animate__animated animate__backInRight 
+            "
+            >
               <Link
                 onClick={() => handleDownloaded("word")}
                 to={CV_WORD_LINK}
