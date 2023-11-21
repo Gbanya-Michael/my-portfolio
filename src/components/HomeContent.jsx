@@ -17,6 +17,7 @@ import {
   awsLogo,
   sqLite,
   graphQL,
+  databaseSchema,
   waterHigh,
   uniformPassport,
   jobPlusHomeBig,
@@ -107,6 +108,11 @@ const skills = [
     id: 15,
     img: sqLite,
     title: "SQLite",
+  },
+  {
+    id: 16,
+    img: databaseSchema,
+    title: "DB Schema",
   },
 ];
 
@@ -434,7 +440,7 @@ export default function HomeContent() {
           <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5">
             {sampleProjects.map((project) => (
               <Link to={`/project-details/${project.id}`} key={project.id}>
-                <li className=" p-5 bg-gray-400/10 w-screen md:w-[30rem] rounded-sm  flex-shrink-0 ">
+                <li className=" p-5 bg-gray-400/10 w-screen h-[20rem] md:w-[30rem] rounded-sm  flex-shrink-0 ">
                   <div className=" md:text-lg text-center text-gray-600 leading-3">
                     <div className="flex justify-between items-baseline gap-1 mb-8">
                       <div className="w-1/3 h-[10rem] flex-shrink-0">
@@ -449,7 +455,7 @@ export default function HomeContent() {
                         <img
                           src={project.bigScreenImg}
                           alt="Screenshot"
-                          className="w-full object-contain"
+                          className="w-full h-full object-contain"
                         />
                         <p className="mt-1 text-xs">Large screen</p>
                       </div>

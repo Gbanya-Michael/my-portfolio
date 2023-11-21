@@ -16,13 +16,13 @@ import sqLite from "../assets/images/sqLite.png";
 import slack from "../assets/images/slack.png";
 import graphQL from "../assets/images/graphQL.png";
 import linkedIn from "../assets/images/linkedIn.png";
-import waterHigh from "../assets/images/waterHigh.jpeg";
+import databaseSchema from "../assets/images/databaseSchema.png";
 
 // Personal Images
 import uniformPassport from "../assets/images/uniformPassport.jpeg";
 import waterBackground from "../assets/images/waterBackground.jpeg";
 import personal1 from "../assets/images/personal1.jpeg";
-
+import waterHigh from "../assets/images/waterHigh.jpeg";
 // Projects
 import jobPlusHomeBig from "../assets/images/jobPlusHomeBig.png";
 import jobPlusHomeSmall from "../assets/images/jobPlusHomeSmall.png";
@@ -76,6 +76,7 @@ export {
   slack,
   sqLite,
   graphQL,
+  databaseSchema,
 
   // Personal images
   uniformPassport,
