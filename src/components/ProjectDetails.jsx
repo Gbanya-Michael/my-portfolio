@@ -14,7 +14,7 @@ export default function ProjectDetails() {
     return <div>Project not found</div>;
   }
   return (
-    <div className=" bg-gray-900 px-3 md:px-20 py-10 grid justify-center md:content-center">
+    <div className="w-full bg-gray-900 px-3 md:px-20 py-10 grid justify-center md:content-center">
       <Link
         to="/"
         className=" text-white flex gap-2 items-center h-fit w-fit px-3 rounded-md bg-violet-900/100"

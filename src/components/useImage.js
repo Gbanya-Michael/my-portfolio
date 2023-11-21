@@ -22,12 +22,17 @@ import waterHigh from "../assets/images/waterHigh.jpeg";
 import uniformPassport from "../assets/images/uniformPassport.jpeg";
 import waterBackground from "../assets/images/waterBackground.jpeg";
 import personal1 from "../assets/images/personal1.jpeg";
-import profilePhoto from "../assets/images/profilePhoto.jpeg";
 
 // Projects
-import jobPlusBig from "../assets/images/jobPlusBig.png";
-import jobPlusSmall from "../assets/images/jobPlusSmall.png";
+import jobPlusHomeBig from "../assets/images/jobPlusHomeBig.png";
+import jobPlusHomeSmall from "../assets/images/jobPlusHomeSmall.png";
+import jobPluListingBig from "../assets/images/jobPlusListingBig.png";
+import jobPlusListingSmall from "../assets/images/jobPlusListingSmall.png";
+import jobPlusRegBig from "../assets/images/jobPlusRegBig.png";
+import jobPlusRegSmall from "../assets/images/jobPlusRegSmall.png";
 import bookerDashBig from "../assets/images/bookerDashBig.png";
+import bookerCheckoutBig from "../assets/images/bookerCheckoutBig.png";
+import bookerCheckoutSmall from "../assets/images/bookerCheckoutSmall.png";
 import bookerDashSmall from "../assets/images/bookerDashSmall.png";
 import bookerHomeBig from "../assets/images/bookerHomeBig.png";
 import bookerHomeSmall from "../assets/images/bookerHomeSmall.png";
@@ -37,6 +42,8 @@ import bookerBookingsBig from "../assets/images/bookerBookingsBig.png";
 import bookerBookingsSmall from "../assets/images/bookerBookingsSmall.png";
 import butcherBig from "../assets/images/butcherBig.png";
 import butcherSmall from "../assets/images/butcherSmall.png";
+import plantPeace1 from "../assets/images/plantPeace1.png";
+import plantPeace2 from "../assets/images/plantPeace2.png";
 
 //Community outreach
 import covid1 from "../assets/images/covid1.png";
@@ -75,11 +82,16 @@ export {
   waterBackground,
   waterHigh,
   personal1,
-  profilePhoto,
 
   // Project Samples
-  jobPlusBig,
-  jobPlusSmall,
+  jobPlusHomeBig,
+  jobPlusHomeSmall,
+  jobPluListingBig,
+  jobPlusListingSmall,
+  jobPlusRegBig,
+  jobPlusRegSmall,
+  bookerCheckoutBig,
+  bookerCheckoutSmall,
   bookerDashBig,
   bookerDashSmall,
   bookerFinBig,
@@ -90,6 +102,8 @@ export {
   bookerBookingsSmall,
   butcherBig,
   butcherSmall,
+  plantPeace1,
+  plantPeace2,
 
   //Community outreach
   covid1,
