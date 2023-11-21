@@ -23,16 +23,23 @@ export default function ProjectDetails() {
       </Link>
       <div className=" md:text-lg text-center text-white leading-3">
         <div className=" mt-10 mb-8  pb-10 md:flex  gap-10 border-b-8">
-          <div className=" w-full">
-            <h1 className="md:text-xl mb-5 mb:my-16 text-start">
-              Project name: {selectedProject?.title}
-            </h1>
-            <p className="text-start text-sm md:text-md text-white/80 mb-5 ">
-              {selectedProject?.description}
-            </p>
+          <div className=" mb:mt-16 text-start  ">
+            <div>
+              <h1 className="md:text-xl mb-3 md:mb-0">Project name:</h1>
+              <h3 className="mb-3 tetx-white/90">{selectedProject?.title}</h3>
+              <p className="text-start text-sm md:text-md text-white/80 mb-5 ">
+                {selectedProject?.description}
+              </p>
+            </div>
+            <div>
+              <h1 className="md:text-xl mb-3">Features:</h1>
+              <p className="text-start text-sm md:text-md text-white/80 mb-5 ">
+                {selectedProject?.features}
+              </p>
+            </div>
             <div>
               <p className="text-start">Technologies used:</p>
-              <ul className="flex flex-wrap gap-3 my-5">
+              <ul className="flex flex-wrap gap-3 my-3">
                 {selectedProject?.technology.map((tech) => (
                   <li
                     className="w-fit px-3 py-1 rounded-full  bg-violet-900/100"

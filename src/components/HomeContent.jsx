@@ -128,7 +128,7 @@ export const sampleProjects = [
     bigScreenImg: jobPlusHomeBig,
     smallScreenImg: jobPlusHomeSmall,
     features:
-      "The screen shown here is the home page. The software is responsive to all devices allowing users to easily navigate between user profile, notifcations, favourite jobs, listings, applications, search and job sectors from mobile and desktop devices. Session storage for cookie notification",
+      "The screen shown here is the home page. The software is responsive to all devices allowing users to easily navigate between user profile, notifcations, favourite jobs, listings, applications, search and job sectors from mobile and desktop devices. Session storage for cookie notification.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -146,11 +146,11 @@ export const sampleProjects = [
     id: 2,
     title: "JobPlus Registration",
     description:
-      "JobPlus plus is a password protected platform. The public cannot access the webiste without registration.",
+      "JobPlus is a password protected platform. The public cannot access the webiste without registration.",
     bigScreenImg: jobPlusRegBig,
     smallScreenImg: jobPlusRegSmall,
     features:
-      "I used JWT authentication to lock down the website. Public users can only access the login and registration pages. For a user to access the full functions website, the user must register by providing their personal data for JWT authentication  ",
+      "I used JWT authentication to lock down the website. Public users can only access the login and registration pages. For a user to access the full functions of the website, the user must register by providing their personal data for JWT authentication.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -168,11 +168,11 @@ export const sampleProjects = [
     id: 3,
     title: "JobPlus Listing Page",
     description:
-      "JobPlus displays a list of user preffered jobs. Users can easily apply or withdraw applications.",
+      "JobPlus displays a list of user preferred jobs. Users can easily apply or withdraw applications.",
     bigScreenImg: jobPluListingBig,
     smallScreenImg: jobPlusListingSmall,
     features:
-      "This screen displays a list of job and important details. Users can see the summary of a job such as, location, the company, the role, job type, and salary. ",
+      "This screen displays a list of jobs and important details. Users can see the summary of a job such as, location, the company, the role, job type, and salary. ",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -190,7 +190,7 @@ export const sampleProjects = [
     id: 4,
     title: "bookerBuddy",
     description:
-      " bookerBuddy is an e-commerce platform. I built this software to serve is a market place for the beauty and lifestyle industry. The app allow users to book appointed with resgistered businesses. The app is complex and sophisticated with advance features such as google geo-location api and payment integration. The app consists of two user athentications: the public and business/admin.",
+      " bookerBuddy is an e-commerce platform. I built this software to serve as a market place for the beauty and lifestyle industry. The app allow users to book appointments with resgistered businesses. The app is complex and sophisticated with advance features such as google geolocation api and payment integration. The app consists of two user athentications: the public and business/admin.",
     bigScreenImg: bookerHomeBig,
     smallScreenImg: bookerHomeSmall,
     features:
@@ -212,7 +212,7 @@ export const sampleProjects = [
     bigScreenImg: bookerCheckoutBig,
     smallScreenImg: bookerCheckoutSmall,
     features:
-      "On this pages, users can verify the appointments they want to book, choose different payment methods, and cornfirm bookings. The system sends automatic booking confirmations.",
+      "On this page, users can verify the appointments they want to book, choose different payment methods, and cornfirm bookings. The system is designed to send automatic booking confirmations.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -230,11 +230,11 @@ export const sampleProjects = [
     id: 6,
     title: "bookerBuddy",
     description:
-      "The software boasts of a marketplace that allows different businesses to host individual stores. Each store has their own CMS allowing store owners to manage services, customers and other features.",
+      "The software boasts of a market-place that allows different businesses to host individual stores. Each store has their own CMS allowing store owners to manage services, customers and other features.",
     bigScreenImg: bookerDashBig,
     smallScreenImg: bookerDashSmall,
     features:
-      "The pages shows the dashboard for businesses. A summary of the days activities, options to switch the store offline or online. View appointment details.",
+      "The pages show the dashboard for businesses. A summary of the day's activities, options to switch the store offline or online. View appointment details.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -248,11 +248,11 @@ export const sampleProjects = [
     id: 7,
     title: "bookerBuddy Finance Page",
     description:
-      "This is the finance section for stores on bookerBuddy. Businesses can track payments easily from the finance section in the admin. Payment tracking is programmed to update authomatically. Invoices are also generated authomatically.",
+      "This is the finance section for stores on bookerBuddy. Businesses can track payments easily from the finance section in the admin. Payment tracking is programmed to update automatically. Invoices are also generated authomatically.",
     bigScreenImg: bookerFinBig,
     smallScreenImg: bookerFinSmall,
     features:
-      "This pages displays the transaction history between stores abd booker. Businesses can edit payment methods and track history of payments and payment methods.",
+      "This page displays the transaction history between stores and booker. Businesses can edit payment methods and track history of payments and payment methods.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -267,11 +267,11 @@ export const sampleProjects = [
     id: 8,
     title: "bookerBuddy Booking History",
     description:
-      "bookerBuddy maintains a booking history for businesses, this is also applied to the users. Businesses can revisit activities and bookings overtime on the history page. It has added features for filters and sort by date which promotes a fast and efficient way too navigate activities.",
+      "bookerBuddy maintains a booking history for businesses, this is also applied to the users. Businesses can revisit activities and bookings over time on the history page. It has added features for filters and sort by date, service, status and attendant which promotes a fast and efficient way to navigate activities.",
     bigScreenImg: bookerBookingsBig,
     smallScreenImg: bookerBookingsSmall,
-    feautures:
-      "This page allows businesses searcg for bookings. It also displays previous and advance bookings. I use React State to automatically change the status of appointments. Details are displayed or hidden depending on device size.",
+    features:
+      "This page allows businesses to search for bookings. It also displays previous and advance bookings. I use React State to automatically change the status of appointments. Details are displayed or hidden depending on device size.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -284,11 +284,11 @@ export const sampleProjects = [
   {
     id: 9,
     title: "Plant Peace",
-    description: `"Plant Peace is a one page blog website. This was a side project to practice to practice my react.js, graphQL and sass skills."`,
+    description: `Plant Peace is a one page blog website. This was a side project to practice my react.js, graphQL and sass skills.`,
     bigScreenImg: plantPeace1,
     smallScreenImg: plantPeace2,
     features:
-      "The website is connected to a backend. The data displayed using GraphQL. I used Strapi Headless CMS to create the database.",
+      "The website is connected to a backend. The data is displayed using GraphQL. I used Strapi Headless CMS to create the database.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -306,6 +306,8 @@ export const sampleProjects = [
       "Meat Fresh is a software created for a meat delivery business. The software allows the owner to manage products, data, and content. Users can go to the website and search for products, order for products, pay for products and rate products. This was a practice project to keep me busy.",
     bigScreenImg: butcherBig,
     smallScreenImg: butcherSmall,
+
+    features: "The website is responsive to all devices.",
     technology: [
       { name: "JavaScript" },
       { name: "React" },
