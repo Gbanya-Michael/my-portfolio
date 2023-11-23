@@ -65,14 +65,15 @@ const skills = [
   },
   {
     id: 5,
-    img: tailwindCssLogo,
-    title: "TailwindCss",
+    img: cssLogo,
+    title: "CSS",
   },
   {
     id: 6,
-    img: gitLogo,
-    title: "Git",
+    img: tailwindCssLogo,
+    title: "TailwindCss",
   },
+
   {
     id: 7,
     img: sassLogo,
@@ -85,34 +86,34 @@ const skills = [
   },
   {
     id: 9,
+    img: graphQL,
+    title: "GraphQL",
+  },
+  {
+    id: 10,
+    img: sqLite,
+    title: "SQLite",
+  },
+  {
+    id: 11,
+    img: databaseSchema,
+    title: "DB Schema",
+  },
+  {
+    id: 12,
+    img: gitLogo,
+    title: "Git",
+  },
+  {
+    id: 13,
     img: awsLogo,
     title: "AWS",
   },
 
   {
-    id: 11,
+    id: 15,
     img: figmaLogo,
     title: "FIGMA",
-  },
-  {
-    id: 12,
-    img: cssLogo,
-    title: "CSS",
-  },
-  {
-    id: 13,
-    img: graphQL,
-    title: "GraphQL",
-  },
-  {
-    id: 15,
-    img: sqLite,
-    title: "SQLite",
-  },
-  {
-    id: 16,
-    img: databaseSchema,
-    title: "DB Schema",
   },
 ];
 
@@ -338,7 +339,7 @@ export default function HomeContent() {
             <img
               src={uniformPassport}
               alt="Profile photo"
-              className="object-contain w-full h-full rounded-full bg-gray-300
+              className="object-contain w-full h-full rounded-full
             ring-1 ring-violet-500
             "
             />
@@ -348,10 +349,10 @@ export default function HomeContent() {
               Name: <span>Michael Gbanya</span>
             </h1>
             <h3 className="text-xs text-gray-600">
-              Profession: <span>Software developer</span>
+              Profession: <span> Full Stack Software developer</span>
             </h3>
             <h5 className="text-xs text-gray-600">
-              Specialization: <span>Front-end development</span>
+              Focus: <span>Front-end development</span>
             </h5>
             <h5 className="text-xs text-gray-600">
               Location: <span>Sydney, Australia</span>
