@@ -12,6 +12,7 @@ import CommunityPage from "./pages/CommunityPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import PrivateRoute from "./components/PrivateRoute";
 import EntryTerms from "./components/EntryTerms";
+import PortfolioPage from "./pages/PortfolioPage";
 function App() {
   return (
     <Routes>
@@ -37,6 +38,7 @@ function App() {
                 path="/project-details/:id"
                 element={<ProjectDetailsPage />}
               />
+              <Route path="/portfolio" element={<PortfolioPage />} />
             </Routes>
           </PrivateRoute>
         }

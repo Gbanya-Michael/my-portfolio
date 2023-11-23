@@ -11,6 +11,7 @@ import {
   PhoneIcon,
   GlobeAltIcon,
   ComputerDesktopIcon,
+  BuildingStorefrontIcon,
 } from "@heroicons/react/24/outline";
 import { profilePic } from "../components/useImage";
 import Header from "./Header";
@@ -18,6 +19,8 @@ import Footer from "./Footer";
 
 const navigation = [
   { name: "Home", href: "/", icon: HomeIcon },
+  { name: "Portfolio", href: "/portfolio", icon: BuildingStorefrontIcon },
+
   { name: "About me", href: "/about", icon: UserIcon },
   {
     name: "Community",
@@ -173,7 +176,7 @@ export default function SideBar(props) {
                       >
                         <item.icon
                           className={classNames(
-                            currentItem === item.href
+                            currentItem === item.name
                               ? "text-white"
                               : "text-violet-200 group-hover:text-white",
                             "h-6 w-6 shrink-0"
