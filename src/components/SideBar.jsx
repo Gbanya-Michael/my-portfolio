@@ -12,7 +12,7 @@ import {
   GlobeAltIcon,
   ComputerDesktopIcon,
 } from "@heroicons/react/24/outline";
-import { uniformPassport } from "../components/useImage";
+import { profilePic } from "../components/useImage";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -190,7 +190,7 @@ export default function SideBar(props) {
                   <div className="gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-violet-700">
                     <img
                       className="h-8 w-8 rounded-full bg-violet-700"
-                      src={uniformPassport}
+                      src={profilePic}
                       alt="Avatar"
                     />
                   </div>
@@ -216,7 +216,7 @@ export default function SideBar(props) {
 
           <img
             className="h-8 w-8 rounded-full bg-violet-700"
-            src={uniformPassport}
+            src={profilePic}
             alt="Avatar"
           />
         </div>

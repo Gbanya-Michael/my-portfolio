@@ -23,6 +23,7 @@ import uniformPassport from "../assets/images/uniformPassport.jpeg";
 import waterBackground from "../assets/images/waterBackground.jpeg";
 import personal1 from "../assets/images/personal1.jpeg";
 import waterHigh from "../assets/images/waterHigh.jpeg";
+import profilePic from "../assets/images/profilePic.png";
 // Projects
 import jobPlusHomeBig from "../assets/images/jobPlusHomeBig.png";
 import jobPlusHomeSmall from "../assets/images/jobPlusHomeSmall.png";
@@ -83,6 +84,7 @@ export {
   waterBackground,
   waterHigh,
   personal1,
+  profilePic,
 
   // Project Samples
   jobPlusHomeBig,

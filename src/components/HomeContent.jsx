@@ -20,6 +20,7 @@ import {
   databaseSchema,
   waterHigh,
   uniformPassport,
+  profilePic,
   jobPlusHomeBig,
   jobPlusHomeSmall,
   jobPluListingBig,
@@ -337,10 +338,10 @@ export default function HomeContent() {
         <div className="my-10 w-fit mx-auto">
           <div className="w-52 h-52">
             <img
-              src={uniformPassport}
+              src={profilePic}
               alt="Profile photo"
-              className="object-contain w-full h-full rounded-full
-            ring-1 ring-violet-500
+              className="object-cover w-full h-full rounded-full
+            
             "
             />
           </div>
