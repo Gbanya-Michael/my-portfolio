@@ -497,7 +497,7 @@ export default function HomeContent() {
                       </span>
                     </p>
                   </div>
-                  <p className="grid grid-cols-1 justify-center content-center text-center mt-3 text-sm text-white bg-violet-500/80 w-5 h-5 py-2 mx-auto  rounded-full">
+                  <p className="grid grid-cols-1 justify-center content-center text-center mt-3 text-sm text-black ring-1 ring-violet-500/80 w-5 h-5 py-2 mx-auto bg-white rounded-full">
                     {project.id}
                   </p>
                 </li>
