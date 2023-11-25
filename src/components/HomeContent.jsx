@@ -19,7 +19,7 @@ import {
   graphQL,
   databaseSchema,
   waterHigh,
-  uniformPassport,
+  flyboarding,
   profilePic,
   jobPlusHomeBig,
   jobPlusHomeSmall,
@@ -392,10 +392,11 @@ export default function HomeContent() {
                     instantly, it gives me maximum satisfaction because I am
                     always driven by results. To me, writing code is not just
                     about making income, it is about craftsmanship and a
-                    craftman must master his craft as I have mastered the art of
-                    creating user friendly and stunning web apps. Coding and
-                    water sports gives me the same level of adrenaline rush. And
-                    it even feels better because I get paid to write code.
+                    craftsman must master his craft as I have mastered the art
+                    of creating user friendly and stunning web apps. Coding and
+                    water sports gives me the same level of adrenaline. It even
+                    feels better because I get paid to write code that impact
+                    people's lives positively.
                   </p>
                 </blockquote>
                 <figcaption className="mt-6 text-base text-white">
@@ -407,7 +408,7 @@ export default function HomeContent() {
 
             <div className="md:w-[25rem] md:h-[20rem] flex-shrink-0 relative  md:block">
               <img
-                src={waterHigh}
+                src={flyboarding}
                 alt="App screenshot"
                 className="w-full h-full rounded-xl md:rounded-3xl object-contain bg-white/5 shadow-2xl ring-1 ring-white/10"
               />

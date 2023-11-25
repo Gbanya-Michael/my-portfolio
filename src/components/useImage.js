@@ -22,8 +22,8 @@ import databaseSchema from "../assets/images/databaseSchema.png";
 import uniformPassport from "../assets/images/uniformPassport.jpeg";
 import waterBackground from "../assets/images/waterBackground.jpeg";
 import personal1 from "../assets/images/personal1.jpeg";
-import waterHigh from "../assets/images/waterHigh.jpeg";
 import profilePic from "../assets/images/profilePic.png";
+import flyboarding from "../assets/images/flyboarding.gif";
 // Projects
 import jobPlusHomeBig from "../assets/images/jobPlusHomeBig.png";
 import jobPlusHomeSmall from "../assets/images/jobPlusHomeSmall.png";
@@ -85,9 +85,9 @@ export {
   // Personal images
   uniformPassport,
   waterBackground,
-  waterHigh,
   personal1,
   profilePic,
+  flyboarding,
 
   // Project Samples
   jobPlusHomeBig,

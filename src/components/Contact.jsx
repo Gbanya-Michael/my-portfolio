@@ -10,9 +10,9 @@ export default function Contact() {
 
   return (
     <>
-      <div className=" mb-72 pt-10 md:mb-[25rem] text-sm md:text-lg max-w-xl mx-auto">
+      <div className=" mb-72 pt-10 md:mb-[25rem] text-sm md:text-lg max-w-xl mx-auto ring-1">
         <div className="mx-3">
-          <p>Thank you for wanting to contact me.</p>
+          <p>Thank you for visiting my website.</p>
           <p>
             To reduce spam, I have added my contact details in my CV. Please
             download my CV below to access my contact information.
