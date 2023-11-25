@@ -1,11 +1,104 @@
 import React from "react";
 import { sampleProjects } from "./HomeContent";
+import { jobplusFrontend1, Admin1Gif, Admin2Gif } from "./useImage";
 
+const gifs = [
+  {
+    id: 1,
+    visual: jobplusFrontend1,
+    title: "JobPlus Frontend",
+  },
+  {
+    id: 2,
+    visual: Admin1Gif,
+    title: "Strapi Backend",
+  },
+  {
+    id: 3,
+    visual: Admin2Gif,
+    title: "Strapi Backend",
+  },
+];
+const stacks = [
+  {
+    id: 1,
+    title: "Frontend",
+    tech: [
+      { name: "React: A JavaScript library for building user interfaces." },
+      { name: "React Router: For routing in React applications." },
+      { name: "Axios: A promise-based HTTP client for making HTTP requests." },
+      {
+        name: "JS-Cookie: A simple, lightweight JavaScript API for handling cookies.",
+      },
+      { name: "JWT-Decode: A library to decode JWTs (JSON Web Tokens)." },
+      {
+        name: "Sass: A preprocessor scripting language that is interpreted or compiled into CSS.",
+      },
+      { name: "Vite: A modern frontend build tool." },
+    ],
+  },
+  {
+    id: 2,
+    title: "Backend",
+
+    tech: [
+      {
+        name: "Strapi: An open-source headless CMS (Content Management System).",
+      },
+      {
+        name: "SQLite: (through better-sqlite3), high-reliability SQL database engine.",
+      },
+      { name: "i18n: Internationalization plugin for Strapi." },
+      { name: "Users-Permissions: Plugin for managing users and permissions." },
+      {
+        name: "Email-PostMark: Plugin for integrating SendGrid email services with Strapi.",
+      },
+    ],
+  },
+];
 export default function Portfolio() {
   return (
     <>
       <div>
-        <div className="px-3">hello</div>
+        <div className="px-3 rounded-sm bg-gray-900 w-full py-8 grid justify-center md:content-center">
+          <div className="text-white mb-8">
+            <h1 className="text-lg"> JobPlus Full-Stack Application</h1>
+            <p className="text-sm text-white/80">
+              JobPlus is a comprehensive full-stack web application designed to
+              streamline the job search and recruitment process. This platform
+              connects job seekers with potential employers, providing an
+              efficient and user-friendly interface for browsing job listings,
+              submitting applications, and managing recruitment processes.
+            </p>
+
+            <ul className="md:flex gap-5">
+              {stacks.map((stack) => (
+                <li key={stack.id}>
+                  <h1 className="text-lg mt-5">{stack?.title}</h1>
+                  <ul className="pl-4">
+                    {stack.tech.map((tec) => (
+                      <li
+                        key={tec.name}
+                        className="text-sm text-white/80 list-disc list-outside"
+                      >
+                        {tec.name}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <ul className="mb-10 text-white text-center text-xs">
+            {gifs.map((gif) => (
+              <li key={gif.id} className="mb-16 h-fit">
+                <img src={gif.visual} alt="" className="w-full h-full mb-2" />
+                <p>{gif.title}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
         <ul className="w-full py-10 grid justify-center md:content-center">
           {sampleProjects.map((project) => (
             <li

@@ -45,6 +45,9 @@ import butcherBig from "../assets/images/butcherBig.png";
 import butcherSmall from "../assets/images/butcherSmall.png";
 import plantPeace1 from "../assets/images/plantPeace1.png";
 import plantPeace2 from "../assets/images/plantPeace2.png";
+import Admin1Gif from "../assets/images/jobplusAdmin2.gif";
+import Admin2Gif from "../assets/images/jobplusAdmin1.gif";
+import jobplusFrontend1 from "../assets/images/jobplusFrontend1.gif";
 
 //Community outreach
 import covid1 from "../assets/images/covid1.png";
@@ -107,6 +110,9 @@ export {
   butcherSmall,
   plantPeace1,
   plantPeace2,
+  jobplusFrontend1,
+  Admin1Gif,
+  Admin2Gif,
 
   //Community outreach
   covid1,
