@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowDownIcon } from "@heroicons/react/24/outline";
+import { ArrowDownIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const downloadTandC = [
   {
@@ -17,6 +17,7 @@ const downloadTandC = [
   },
 ];
 // CV links
+
 const CV_PDF_LINK = "/Michael-Gbanya-CV.pdf";
 const CV_WORD_LINK = "/Michael-Gbanya-CV.docx";
 
@@ -41,15 +42,14 @@ export default function DownloadCv() {
   };
   return (
     <>
-      <div className="px-3 relative pt-16 mb-72 md:mb-[25rem] text-sm md:text-lg max-w-2xl mx-auto">
-        <div className="text-gray-600  ">
-          Hello there! I believe you have interest in working with me as you
-          have considered downloading my CV. Please read the terms and agree by
-          checking the box below. <br></br> I am happy to work with you. Cheers!
+      <div className="px-3 py-2 relative text-sm md:text-lg text-gray-500  max-w-2xl mx-auto border-1 border border-violet-500 rounded-lg h-fit pb-10">
+        <div className=" ">
+          Please read the terms and agree by checking the box below. <br></br> I
+          am happy to work with you. Cheers!
         </div>
         <ol className=" list-disc mt-5  ">
           {downloadTandC.map((terms) => (
-            <li key={terms.id} className="ml-5 mt-2 text-gray-600">
+            <li key={terms.id} className="ml-5 mt-2">
               {terms.item}
             </li>
           ))}
@@ -71,8 +71,17 @@ export default function DownloadCv() {
         {agreed && (
           <div className="max-w-md h-fit px-3 rounded-sm absolute z-0 top-30 bottom-100 right-0 left-0">
             {downloadMessage && (
-              <div className=" absolute z-10 text-gray-600 mb-3 bg-gray-100 p-3 h-fit rounded-md ring-gray-300 ring-1 shadow-2xl">
-                <p>{downloadMessage}</p>
+              <div
+                className={`absolute z-10 text-gray-500 mb-3 bg-gray-100 p-3 h-fit rounded-md ring-gray-300 ring-1 shadow-2xl`}
+              >
+                <p className="flex">
+                  {downloadMessage}s
+                  <XMarkIcon
+                    className="w-6 h-6 text-gray-900 cursor-pointer"
+                    onClick={() => setDownloadMessage(false)}
+                  />
+                </p>
+
                 <Link to="/">
                   Return <span className="text-blue-500 ">home</span>
                 </Link>
@@ -88,7 +97,7 @@ export default function DownloadCv() {
                 to={CV_WORD_LINK}
                 download={customNameWord}
                 target="_blank"
-                className=" flex gap-1 items-center bg-blue-600 text-white p-2 md:p-3 rounded-lg ring ring-blue-400/10 shadow-md hover:bg-blue-400"
+                className="text-xs flex gap-1 items-center bg-blue-600 text-white p-2 rounded-lg ring ring-blue-400/10 shadow-md hover:bg-blue-400"
               >
                 Downlaod word <ArrowDownIcon className=" w-4 h-4 " />
               </Link>
@@ -97,7 +106,7 @@ export default function DownloadCv() {
                 to={CV_PDF_LINK}
                 download={customNamePDF}
                 target="_blank"
-                className="flex gap-1 items-center bg-red-800 text-white p-2 md:p-3 rounded-lg ring ring-red-400/10 shadow-md hover:bg-red-600"
+                className=" text-xs flex gap-1 items-center bg-red-800 text-white p-2 rounded-lg ring ring-red-400/10 shadow-md hover:bg-red-600"
               >
                 Download PDF <ArrowDownIcon className=" w-4 h-4 " />
               </Link>
