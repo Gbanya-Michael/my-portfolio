@@ -118,7 +118,7 @@ const skills = [
   },
 ];
 
-const MAX_CHAR_LENGTH = 52;
+export const MAX_CHAR_LENGTH = 52;
 
 export const sampleProjects = [
   {
@@ -285,24 +285,6 @@ export const sampleProjects = [
   },
   {
     id: 9,
-    title: "Plant Peace",
-    description: `Plant Peace is a one page blog website. This was a side project to practice my react.js, graphQL and sass skills.`,
-    bigScreenImg: plantPeace1,
-    smallScreenImg: plantPeace2,
-    features:
-      "The website is connected to a backend. The data is displayed using GraphQL. I used Strapi Headless CMS to create the database.",
-    technology: [
-      { name: "JavaScript" },
-      { name: "React" },
-      { name: "TailwindCSS" },
-      { name: "CSS" },
-      { name: "npm" },
-      { name: "vite" },
-    ],
-  },
-
-  {
-    id: 10,
     title: "Butcher App",
     description:
       "Meat Fresh is a software created for a meat delivery business. The software allows the owner to manage products, data, and content. Users can go to the website and search for products, order for products, pay for products and rate products. This was a practice project to keep me busy.",
@@ -317,21 +299,22 @@ export const sampleProjects = [
     ],
   },
 ];
+
+export const updatedProjects = sampleProjects.map((project) => ({
+  ...project,
+  isTruncated: true,
+}));
+
+export const truncate = (description, projectId) => {
+  const project = updatedProjects.find((project) => project.id === projectId);
+  const shouldTruncate =
+    description.length > MAX_CHAR_LENGTH && project?.isTruncated;
+  if (!shouldTruncate) return description;
+  const truncated = description.slice(0, MAX_CHAR_LENGTH);
+  return truncated + "...";
+};
+
 export default function HomeContent() {
-  const updatedProjects = sampleProjects.map((project) => ({
-    ...project,
-    isTruncated: true,
-  }));
-
-  const truncate = (description, projectId) => {
-    const project = updatedProjects.find((project) => project.id === projectId);
-    const shouldTruncate =
-      description.length > MAX_CHAR_LENGTH && project?.isTruncated;
-    if (!shouldTruncate) return description;
-    const truncated = description.slice(0, MAX_CHAR_LENGTH);
-    return truncated + "...";
-  };
-
   return (
     <>
       <main className="relative">
@@ -341,7 +324,6 @@ export default function HomeContent() {
               src={profilePic}
               alt="Profile photo"
               className="object-cover w-full h-full rounded-full
-            
             "
             />
           </div>
