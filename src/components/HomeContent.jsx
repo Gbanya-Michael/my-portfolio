@@ -18,7 +18,6 @@ import {
   sqLite,
   graphQL,
   databaseSchema,
-  waterHigh,
   flyboarding,
   profilePic,
   jobPlusHomeBig,
@@ -37,8 +36,6 @@ import {
   bookerHomeSmall,
   bookerBookingsBig,
   bookerBookingsSmall,
-  plantPeace1,
-  plantPeace2,
   butcherBig,
   butcherSmall,
 } from "../components/useImage";
