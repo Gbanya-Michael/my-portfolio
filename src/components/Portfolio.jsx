@@ -5,6 +5,7 @@ export default function Portfolio() {
   return (
     <>
       <div>
+        <div className="px-3">hello</div>
         <ul className="w-full py-10 grid justify-center md:content-center">
           {sampleProjects.map((project) => (
             <li
