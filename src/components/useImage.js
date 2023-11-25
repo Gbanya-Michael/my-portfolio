@@ -19,7 +19,6 @@ import linkedIn from "../assets/images/linkedIn.png";
 import databaseSchema from "../assets/images/databaseSchema.png";
 
 // Personal Images
-import uniformPassport from "../assets/images/uniformPassport.jpeg";
 import waterBackground from "../assets/images/waterBackground.jpeg";
 import personal1 from "../assets/images/personal1.jpeg";
 import profilePic from "../assets/images/profilePic.png";
@@ -43,8 +42,7 @@ import bookerBookingsBig from "../assets/images/bookerBookingsBig.png";
 import bookerBookingsSmall from "../assets/images/bookerBookingsSmall.png";
 import butcherBig from "../assets/images/butcherBig.png";
 import butcherSmall from "../assets/images/butcherSmall.png";
-import plantPeace1 from "../assets/images/plantPeace1.png";
-import plantPeace2 from "../assets/images/plantPeace2.png";
+
 import Admin1Gif from "../assets/images/jobplusAdmin2.gif";
 import Admin2Gif from "../assets/images/jobplusAdmin1.gif";
 import jobplusFrontend1 from "../assets/images/jobplusFrontend1.gif";
@@ -83,7 +81,6 @@ export {
   databaseSchema,
 
   // Personal images
-  uniformPassport,
   waterBackground,
   personal1,
   profilePic,
@@ -108,8 +105,6 @@ export {
   bookerBookingsSmall,
   butcherBig,
   butcherSmall,
-  plantPeace1,
-  plantPeace2,
   jobplusFrontend1,
   Admin1Gif,
   Admin2Gif,
