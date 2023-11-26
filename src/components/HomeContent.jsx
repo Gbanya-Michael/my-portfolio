@@ -471,7 +471,7 @@ export default function HomeContent() {
                     <p className="text-gray-600 mb-2">
                       Project name: {project.title}
                     </p>
-                    <p className="text-start font-light text-sm">
+                    <p className="text-center font-light text-sm">
                       {truncate(project.description, project.id)}
                       <span className="text-blue-500 cursor-pointer">
                         See more
