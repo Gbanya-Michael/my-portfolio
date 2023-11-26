@@ -99,7 +99,7 @@ export default function DownloadCv() {
                 target="_blank"
                 className="text-xs flex gap-1 items-center bg-blue-600 text-white p-2 rounded-lg ring ring-blue-400/10 shadow-md hover:bg-blue-400"
               >
-                Downlaod word <ArrowDownIcon className=" w-4 h-4 " />
+                Downlaod Word <ArrowDownIcon className=" w-4 h-4 " />
               </Link>
               <Link
                 onClick={() => handleDownloaded("pdf")}
