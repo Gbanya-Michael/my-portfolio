@@ -131,13 +131,13 @@ export const sampleProjects = [
     technology: [
       { name: "JavaScript" },
       { name: "React" },
-      { name: "SASS/SCSS" },
+      { name: "SASS" },
       { name: "GraphQL" },
       { name: "Node" },
       { name: "SQLite" },
       { name: "Strapi" },
       { name: "Vite" },
-      { name: "npm" },
+      { name: "NPM" },
       { name: "Figma" },
     ],
   },
@@ -153,13 +153,13 @@ export const sampleProjects = [
     technology: [
       { name: "JavaScript" },
       { name: "React" },
-      { name: "SASS/SCSS" },
+      { name: "SASS" },
       { name: "GraphQL" },
       { name: "Node" },
       { name: "SQLite" },
       { name: "Strapi" },
       { name: "Vite" },
-      { name: "npm" },
+      { name: "NPM" },
       { name: "Figma" },
     ],
   },
@@ -175,13 +175,13 @@ export const sampleProjects = [
     technology: [
       { name: "JavaScript" },
       { name: "React" },
-      { name: "SASS/SCSS" },
+      { name: "SASS" },
       { name: "GraphQL" },
       { name: "Node" },
       { name: "SQLite" },
       { name: "Strapi" },
       { name: "Vite" },
-      { name: "npm" },
+      { name: "NPM" },
       { name: "Figma" },
     ],
   },
@@ -199,8 +199,8 @@ export const sampleProjects = [
       { name: "React" },
       { name: "TailwindCSS" },
       { name: "CSS" },
-      { name: "npm" },
-      { name: "vite" },
+      { name: "NPM" },
+      { name: "Vite" },
     ],
   },
   {
@@ -221,7 +221,7 @@ export const sampleProjects = [
       { name: "SQLite" },
       { name: "Strapi" },
       { name: "Vite" },
-      { name: "npm" },
+      { name: "NPM" },
       { name: "Figma" },
     ],
   },
@@ -239,7 +239,7 @@ export const sampleProjects = [
       { name: "React" },
       { name: "TailwindCSS" },
       { name: "CSS" },
-      { name: "npm" },
+      { name: "NPM" },
       { name: "vite" },
     ],
   },
@@ -257,8 +257,8 @@ export const sampleProjects = [
       { name: "React" },
       { name: "TailwindCSS" },
       { name: "CSS" },
-      { name: "npm" },
-      { name: "vite" },
+      { name: "NPM" },
+      { name: "Vite" },
     ],
   },
 
@@ -276,8 +276,8 @@ export const sampleProjects = [
       { name: "React" },
       { name: "TailwindCSS" },
       { name: "CSS" },
-      { name: "npm" },
-      { name: "vite" },
+      { name: "NPM" },
+      { name: "Vite" },
     ],
   },
   {
@@ -289,11 +289,7 @@ export const sampleProjects = [
     smallScreenImg: butcherSmall,
 
     features: "The website is responsive to all devices.",
-    technology: [
-      { name: "JavaScript" },
-      { name: "React" },
-      { name: "SASS/SCSS" },
-    ],
+    technology: [{ name: "JavaScript" }, { name: "React" }, { name: "SASS" }],
   },
 ];
 
@@ -332,7 +328,7 @@ export default function HomeContent() {
               Profession: <span> Full Stack Software developer</span>
             </h3>
             <h5 className="text-xs text-gray-600">
-              Focus: <span>Front-end development</span>
+              Focus: <span>Frontend development</span>
             </h5>
             <h5 className="text-xs text-gray-600">
               Location: <span>Sydney, Australia</span>
