@@ -311,8 +311,8 @@ export default function HomeContent() {
   return (
     <>
       <main className="relative">
-        <div className="my-10 w-fit mx-auto">
-          <div className="w-52 h-52">
+        <div className="my-8 w-fit mx-auto">
+          <div className=" w-48 h-48">
             <img
               src={profilePic}
               alt="Profile photo"
@@ -325,10 +325,10 @@ export default function HomeContent() {
               Name: <span>Michael Gbanya</span>
             </h1>
             <h3 className="text-xs text-gray-600">
-              Profession: <span> Full Stack Software developer</span>
+              Profession: <span> Full Stack Software Developer</span>
             </h3>
             <h5 className="text-xs text-gray-600">
-              Focus: <span>Frontend development</span>
+              Focus: <span>Frontend Development</span>
             </h5>
             <h5 className="text-xs text-gray-600">
               Location: <span>Sydney, Australia</span>
