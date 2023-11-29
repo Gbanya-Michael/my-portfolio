@@ -312,7 +312,7 @@ export default function HomeContent() {
     <>
       <main className="relative">
         <div className="my-8 w-fit mx-auto">
-          <div className=" w-48 h-48">
+          <div className=" w-44 h-44 mx-auto">
             <img
               src={profilePic}
               alt="Profile photo"
