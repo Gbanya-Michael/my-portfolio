@@ -6,9 +6,8 @@ export default function Header() {
       <div className="text-xs  p-3 ring-1 ring-violet-200 bg-gray-400/10 my-5 shadow-md shadow-black rounded-md">
         <p>
           <span className="mr-1 text-violet-500">Disclaimer:</span>This website
-          and the contents were hard coded by me.AI or third party apps were not
-          used to generate this website. But as a developer, I utilize AI as a
-          reference or research tool.
+          and the contents were hard coded by me. AI or third party apps were
+          not used to generate this website.
         </p>
         <div className="mt-3">
           <span className="text-violet-500 mr-1">Technologies used:</span>
