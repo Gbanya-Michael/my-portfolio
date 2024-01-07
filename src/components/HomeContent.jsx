@@ -333,6 +333,18 @@ export default function HomeContent() {
             <h5 className="text-xs text-gray-600">
               Location: <span>Sydney, Australia</span>
             </h5>
+
+            <h5 className="text-xs text-gray-600">
+              Live project:{" "}
+              <Link
+                to="https://kinetickrafters.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700"
+              >
+                <span>https://kinetickrafters.com</span>
+              </Link>
+            </h5>
           </div>
         </div>
 
