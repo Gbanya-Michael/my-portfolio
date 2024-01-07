@@ -38,6 +38,8 @@ import {
   bookerBookingsSmall,
   butcherBig,
   butcherSmall,
+  kineticSmall,
+  kineticBig,
 } from "../components/useImage";
 
 const skills = [
@@ -120,6 +122,28 @@ export const MAX_CHAR_LENGTH = 52;
 export const sampleProjects = [
   {
     id: 1,
+    title: "Kinetic Kraft",
+    description:
+      "JobPlus is an online job search engine. The software gathers lists of jobs from job websites and update the data base. The website allows users to register, apply for jobs, save jobs and search for jobs based on preferences and filters. The UI, UX, layouts, database, CMS were created by me from scratch",
+
+    bigScreenImg: kineticBig,
+    smallScreenImg: kineticSmall,
+    features:
+      "The screen shown here is the home page. The software is responsive to all devices allowing users to easily navigate between user profile, notifcations, favourite jobs, listings, applications, search and job sectors from mobile and desktop devices. Session storage for cookie notification.",
+    technology: [
+      { name: "JavaScript" },
+      { name: "React" },
+      { name: "SASS" },
+      { name: "GraphQL" },
+      { name: "Node" },
+      { name: "Strapi" },
+      { name: "Vite" },
+      { name: "NPM" },
+      { name: "Figma" },
+    ],
+  },
+  {
+    id: 2,
     title: "JobPlus",
     description:
       "JobPlus is an online job search engine. The software gathers lists of jobs from job websites and update the data base. The website allows users to register, apply for jobs, save jobs and search for jobs based on preferences and filters. The UI, UX, layouts, database, CMS were created by me from scratch",
@@ -142,7 +166,7 @@ export const sampleProjects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "JobPlus Registration",
     description:
       "JobPlus is a password protected platform. The public cannot access the webiste without registration.",
@@ -164,7 +188,7 @@ export const sampleProjects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "JobPlus Listing Page",
     description:
       "JobPlus displays a list of user preferred jobs. Users can easily apply or withdraw applications.",
@@ -186,7 +210,7 @@ export const sampleProjects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "bookerBuddy",
     description:
       " bookerBuddy is an e-commerce platform. I built this software to serve as a market place for the beauty and lifestyle industry. The app allow users to book appointments with resgistered businesses. The app is complex and sophisticated with advance features such as google geolocation api and payment integration. The app consists of two user athentications: the public and business/admin.",
@@ -204,7 +228,7 @@ export const sampleProjects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "bookerBuddy Checkout Page",
     description:
       "bookerBuddy confirm payments before confirming appointments. This is important to protect our business partners against no-shows and rapid cancellations.",
@@ -226,7 +250,7 @@ export const sampleProjects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "bookerBuddy",
     description:
       "The software boasts of a market-place that allows different businesses to host individual stores. Each store has their own CMS allowing store owners to manage services, customers and other features.",
@@ -244,7 +268,7 @@ export const sampleProjects = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "bookerBuddy Finance Page",
     description:
       "This is the finance section for stores on bookerBuddy. Businesses can track payments easily from the finance section in the admin. Payment tracking is programmed to update automatically. Invoices are also generated authomatically.",
@@ -263,7 +287,7 @@ export const sampleProjects = [
   },
 
   {
-    id: 8,
+    id: 9,
     title: "bookerBuddy Booking History",
     description:
       "bookerBuddy maintains a booking history for businesses, this is also applied to the users. Businesses can revisit activities and bookings over time on the history page. It has added features for filters and sort by date, service, status and attendant which promotes a fast and efficient way to navigate activities.",
@@ -281,7 +305,7 @@ export const sampleProjects = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "Butcher App",
     description:
       "Meat Fresh is a software created for a meat delivery business. The software allows the owner to manage products, data, and content. Users can go to the website and search for products, order for products, pay for products and rate products. This was a practice project to keep me busy.",
