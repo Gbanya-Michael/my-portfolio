@@ -42,6 +42,8 @@ import bookerBookingsBig from "../assets/images/bookerBookingsBig.png";
 import bookerBookingsSmall from "../assets/images/bookerBookingsSmall.png";
 import butcherBig from "../assets/images/butcherBig.png";
 import butcherSmall from "../assets/images/butcherSmall.png";
+import kineticSmall from "../assets/images/kineticSmall.png";
+import kineticBig from "../assets/images/kineticBig.png";
 
 import Admin1Gif from "../assets/images/jobplusAdmin2.gif";
 import Admin2Gif from "../assets/images/jobplusAdmin1.gif";
@@ -108,6 +110,8 @@ export {
   jobplusFrontend1,
   Admin1Gif,
   Admin2Gif,
+  kineticBig,
+  kineticSmall,
 
   //Community outreach
   covid1,
