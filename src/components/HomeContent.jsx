@@ -335,7 +335,7 @@ export default function HomeContent() {
             </h5>
 
             <h5 className="text-xs text-gray-600">
-              Live project:{" "}
+              Live project:
               <Link
                 to="https://kinetickrafters.com"
                 target="_blank"
