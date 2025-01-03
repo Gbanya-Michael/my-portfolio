@@ -1,74 +1,117 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 import { sampleProjects } from "./HomeContent";
 
 export default function ProjectDetails() {
-  const projects = sampleProjects;
   const { id } = useParams();
-  const selectedProject = projects.find(
+  const selectedProject = sampleProjects.find(
     (project) => project.id === parseInt(id)
   );
 
   if (!selectedProject) {
-    return <div>Project not found</div>;
-  }
-  return (
-    <div className="w-full bg-gray-900 px-3 md:px-20 py-10 grid justify-center md:content-center">
-      <Link
-        to="/"
-        className=" text-white flex gap-2 items-center h-fit w-fit px-3 rounded-md bg-violet-900/100"
-      >
-        <ArrowLeftIcon className="w-4 h-4" /> Back
-      </Link>
-      <div className=" md:text-lg text-center text-white leading-3">
-        <div className=" mt-10 mb-8  pb-10 md:flex  gap-10 border-b-8">
-          <div className=" mb:mt-16 text-start  ">
-            <div>
-              <h1 className="md:text-xl mb-3 md:mb-0">Project name:</h1>
-              <h3 className="mb-3 tetx-white/90">{selectedProject?.title}</h3>
-              <p className="text-start text-sm md:text-md text-white/80 mb-5 ">
-                {selectedProject?.description}
-              </p>
-            </div>
-            <div>
-              <h1 className="md:text-xl mb-3">Features:</h1>
-              <p className="text-start text-sm md:text-md text-white/80 mb-5 ">
-                {selectedProject?.features}
-              </p>
-            </div>
-            <div>
-              <p className="text-start">Technologies used:</p>
-              <ul className="flex flex-wrap gap-3 my-3">
-                {selectedProject?.technology.map((tech) => (
-                  <li
-                    className="w-fit px-3 py-1 rounded-full  bg-violet-900/100"
-                    key={tech.name}
-                  >
-                    {tech.name}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-          <div>
-            <img
-              src={selectedProject?.smallScreenImg}
-              alt="Screenshot"
-              className="w-full h-full object-contain"
-            />
-            <p className="mt-1 text-xs">Small screen</p>
-          </div>
-        </div>
-        <div className="h-fit w-fit">
-          <img
-            src={selectedProject?.bigScreenImg}
-            alt="Screenshot"
-            className="w-full h-full object-contain"
-          />
-          <p className="mt-1 text-xs">Large screen</p>
-        </div>
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-900">
+        <div className="text-white text-xl">Project not found</div>
       </div>
-    </div>
+    );
+  }
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 px-4 md:px-8 py-12"
+    >
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ x: -20, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
+          >
+            <ArrowLeftIcon className="w-5 h-5" />
+            <span>Back to Projects</span>
+          </Link>
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+          className="mt-8 bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8"
+        >
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="space-y-6">
+              <div>
+                <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  {selectedProject.title}
+                </h1>
+                <p className="text-gray-300 leading-relaxed">
+                  {selectedProject.description}
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-white mb-3">Features</h2>
+                <p className="text-gray-300 leading-relaxed">
+                  {selectedProject.features}
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-xl font-semibold text-white mb-3">
+                  Technologies
+                </h2>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technology.map((tech) => (
+                    <motion.span
+                      key={tech.name}
+                      whileHover={{ scale: 1.05 }}
+                      className="px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm"
+                    >
+                      {tech.name}
+                    </motion.span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="bg-gray-800 rounded-xl p-4"
+              >
+                <img
+                  src={selectedProject.smallScreenImg}
+                  alt="Mobile view"
+                  className="w-full rounded-lg shadow-lg"
+                />
+                <p className="text-center text-gray-400 mt-2 text-sm">
+                  Mobile View
+                </p>
+              </motion.div>
+            </div>
+          </div>
+
+          <motion.div
+            whileHover={{ scale: 1.01 }}
+            className="bg-gray-800 rounded-xl p-4"
+          >
+            <img
+              src={selectedProject.bigScreenImg}
+              alt="Desktop view"
+              className="w-full rounded-lg shadow-lg"
+            />
+            <p className="text-center text-gray-400 mt-2 text-sm">Desktop View</p>
+          </motion.div>
+        </motion.div>
+      </div>
+    </motion.div>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "animate.css";
 
 import {
-  code,
   javaScriptLogo,
   reactLogo,
   typeScriptLogo,
@@ -120,28 +120,7 @@ const skills = [
 export const MAX_CHAR_LENGTH = 52;
 
 export const sampleProjects = [
-  {
-    id: 1,
-    title: "Kinetic Kraft",
-    description:
-      "JobPlus is an online job search engine. The software gathers lists of jobs from job websites and update the data base. The website allows users to register, apply for jobs, save jobs and search for jobs based on preferences and filters. The UI, UX, layouts, database, CMS were created by me from scratch",
-
-    bigScreenImg: kineticBig,
-    smallScreenImg: kineticSmall,
-    features:
-      "The screen shown here is the home page. The software is responsive to all devices allowing users to easily navigate between user profile, notifcations, favourite jobs, listings, applications, search and job sectors from mobile and desktop devices. Session storage for cookie notification.",
-    technology: [
-      { name: "JavaScript" },
-      { name: "React" },
-      { name: "SASS" },
-      { name: "GraphQL" },
-      { name: "Node" },
-      { name: "Strapi" },
-      { name: "Vite" },
-      { name: "NPM" },
-      { name: "Figma" },
-    ],
-  },
+ 
   {
     id: 2,
     title: "JobPlus",
@@ -211,13 +190,13 @@ export const sampleProjects = [
   },
   {
     id: 5,
-    title: "bookerBuddy",
+    title: "Birabook",
     description:
-      " bookerBuddy is an e-commerce platform. I built this software to serve as a market place for the beauty and lifestyle industry. The app allow users to book appointments with resgistered businesses. The app is complex and sophisticated with advance features such as google geolocation api and payment integration. The app consists of two user athentications: the public and business/admin.",
+      " Birabook is an e-commerce platform. I built this software to serve as a market place for the beauty and lifestyle industry. The app allow users to book appointments with resgistered businesses. The app is complex and sophisticated with advance features such as google geolocation api and payment integration. The app consists of two user athentications: the public and business/admin.",
     bigScreenImg: bookerHomeBig,
     smallScreenImg: bookerHomeSmall,
     features:
-      'Home screen for users on bookerBuddy. The software authomatically detects user location and display services around the user in diffrent categories, such as "Top rated", "Most visited places" and nearby shops. Easy navigation on all devices. A sophisticated footer with many functions spanning across all pages',
+      'Home screen for users on Birabook. The software authomatically detects user location and display services around the user in diffrent categories, such as "Top rated", "Most visited places" and nearby shops. Easy navigation on all devices. A sophisticated footer with many functions spanning across all pages',
     technology: [
       { name: "JavaScript" },
       { name: "React" },
@@ -229,9 +208,9 @@ export const sampleProjects = [
   },
   {
     id: 6,
-    title: "bookerBuddy Checkout Page",
+    title: "Birabook Checkout Page",
     description:
-      "bookerBuddy confirm payments before confirming appointments. This is important to protect our business partners against no-shows and rapid cancellations.",
+      "Birabook confirm payments before confirming appointments. This is important to protect our business partners against no-shows and rapid cancellations.",
     bigScreenImg: bookerCheckoutBig,
     smallScreenImg: bookerCheckoutSmall,
     features:
@@ -251,7 +230,7 @@ export const sampleProjects = [
   },
   {
     id: 7,
-    title: "bookerBuddy",
+    title: "Birabook",
     description:
       "The software boasts of a market-place that allows different businesses to host individual stores. Each store has their own CMS allowing store owners to manage services, customers and other features.",
     bigScreenImg: bookerDashBig,
@@ -269,9 +248,9 @@ export const sampleProjects = [
   },
   {
     id: 8,
-    title: "bookerBuddy Finance Page",
+    title: "Birabook Finance Page",
     description:
-      "This is the finance section for stores on bookerBuddy. Businesses can track payments easily from the finance section in the admin. Payment tracking is programmed to update automatically. Invoices are also generated authomatically.",
+      "This is the finance section for stores on Birabook. Businesses can track payments easily from the finance section in the admin. Payment tracking is programmed to update automatically. Invoices are also generated authomatically.",
     bigScreenImg: bookerFinBig,
     smallScreenImg: bookerFinSmall,
     features:
@@ -288,9 +267,9 @@ export const sampleProjects = [
 
   {
     id: 9,
-    title: "bookerBuddy Booking History",
+    title: "Birabook Booking History",
     description:
-      "bookerBuddy maintains a booking history for businesses, this is also applied to the users. Businesses can revisit activities and bookings over time on the history page. It has added features for filters and sort by date, service, status and attendant which promotes a fast and efficient way to navigate activities.",
+      "Birabook maintains a booking history for businesses, this is also applied to the users. Businesses can revisit activities and bookings over time on the history page. It has added features for filters and sort by date, service, status and attendant which promotes a fast and efficient way to navigate activities.",
     bigScreenImg: bookerBookingsBig,
     smallScreenImg: bookerBookingsSmall,
     features:
@@ -331,194 +310,294 @@ export const truncate = (description, projectId) => {
   return truncated + "...";
 };
 
+const recentProjects = [
+  {
+    title: "Angia Technologies",
+    url: "https://angia.com.au",
+    description: "Software Development Company",
+  },
+
+  {
+    title: "BiraBook",
+    url: "https://birabook.com",
+    description: "Appointment Booking System",
+  },
+  {
+    title: "JobPlus",
+    url: "https://github.com/Gbanya-Michael/Jobplus-Fullstack",
+  },
+];
+
 export default function HomeContent() {
   return (
-    <>
-      <main className="relative">
-        <div className="my-8 w-fit mx-auto">
-          <div className=" w-44 h-44 mx-auto">
-            <img
-              src={profilePic}
-              alt="Profile photo"
-              className="object-cover w-full h-full rounded-full
-            "
-            />
-          </div>
-          <div className="mt-3 text-center">
-            <h1 className="text-gray-900">
-              Name: <span>Michael Gbanya</span>
-            </h1>
-            <h3 className="text-xs text-gray-600">
-              Profession: <span> Full Stack Software Developer</span>
-            </h3>
-            <h5 className="text-xs text-gray-600">
-              Focus: <span>Frontend Development</span>
-            </h5>
-            <h5 className="text-xs text-gray-600">
-              Location: <span>Sydney, Australia</span>
-            </h5>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Hero Section */}
+      <section className="relative min-h-screen py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        {/* Background Animation */}
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="absolute -inset-[10px] opacity-50"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at center, white 1px, transparent 1px)",
+              backgroundSize: "50px 10px",
+            }}
+            animate={{
+              backgroundPosition: ["0px 0px", "50px 50px"],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          />
+        </div>
 
-            <h5 className="text-xs text-gray-600">
-              Live project:
-              <Link
-                to="https://kinetickrafters.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-700"
+        <div className="relative container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Profile */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center md:text-left"
+            >
+              <motion.div
+                className="relative inline-block mb-8"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
-                <span>https://kinetickrafters.com</span>
-              </Link>
-            </h5>
+                <div className="absolute inset-0 bg-blue-500 rounded-full blur-xl opacity-50" />
+                <img
+                  src={profilePic}
+                  alt="Profile photo"
+                  className="relative w-48 h-48 rounded-full object-cover border-4 border-white/10"
+                />
+              </motion.div>
+
+              <motion.h1
+                className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-400 mb-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                Michael Gbanya
+              </motion.h1>
+
+              <motion.div
+                className="space-y-3 text-gray-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <p className="text-2xl font-light">
+                  Full Stack Software Developer
+                </p>
+                <p className="text-xl text-blue-400">
+                  Frontend Focused
+                </p>
+                <p className="flex items-center justify-center md:justify-start gap-2">
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Sydney, Australia
+                </p>
+              </motion.div>
+            </motion.div>
+
+            {/* Right Column - Recent Projects */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-3xl" />
+              <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+                <h2 className="text-2xl font-bold mb-6 text-white">
+                  Recent Projects
+                </h2>
+                <div className="space-y-4">
+                  {recentProjects.map((project, index) => (
+                    <motion.div
+                      key={project.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 + index * 0.1 }}
+                    >
+                      <Link
+                        to={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group block p-4 rounded-xl transition-all duration-300
+                          bg-gradient-to-r from-gray-800/50 to-gray-900/50
+                          hover:from-blue-900/50 hover:to-purple-900/50
+                          border border-white/5 hover:border-blue-500/30"
+                      >
+                        <h3 className="text-xl font-semibold text-white group-hover:text-blue-400">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-400 mt-1 group-hover:text-gray-300">
+                          {project.description}
+                        </p>
+                        <p className="text-sm text-blue-400/80 mt-2 group-hover:text-blue-300 flex items-center gap-2">
+                          <svg
+                            className="w-4 h-4"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth="2"
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                          {project.url}
+                        </p>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
+      </section>
 
-        <div className="relative isolate overflow">
-          <div className="relative md:flex justify-between gap-2 overflow-hidden bg-gray-900 px-2 md:px-6 py-3 md:py-6 shadow-xl rounded-xl md:rounded-3xl ">
-            <img
-              className="absolute inset-0 h-full w-full object-cover brightness-100 saturate-0"
-              src={code}
-              alt="codeImage"
-            />
-            <div className="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />
-            <div
-              className="absolute -left-80 -top-56 transform-gpu blur-3xl"
-              aria-hidden="true"
-            >
-              <div
-                className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-[0.45]"
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-              />
+      {/* Why I Write Code Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="max-w-3xl mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl font-bold mb-8">Why I Write Code</h2>
+            <div className="prose prose-lg mx-auto">
+              <p className="text-gray-600 leading-relaxed">
+                I love challenges and writing code challenges me to the core.
+                <br />
+                In all the duties I have performed, the challenges I encounter
+                while writing code brings out the best problem solving and
+                creative skills in me. The most amazing part is when I solve the
+                problem and I could see the outcome instantly, it gives me
+                maximum satisfaction because I am always driven by results. To
+                me, writing code is not just about making income, it is about
+                craftsmanship and a craftsman must master his craft as I have
+                mastered the art of creating user friendly and stunning web
+                apps.
+              </p>
             </div>
-            <div
-              className="hidden md:absolute  md:left-[50rem] md:block md:transform-gpu md:blur-3xl"
-              aria-hidden="true"
-            >
-              <div
-                className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-r from-[#ff4694] to-[#776fff] opacity-25"
-                style={{
-                  clipPath:
-                    "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-                }}
-              />
-            </div>
-            <div className="relative mx-auto max-w-2xl lg:mx-0">
-              <h1 className=" text-white mb-3 font-extrabold text-center sm:text-3xl">
-                Why I Write Code
-              </h1>
-              <figure>
-                <blockquote className=" text-xs font-normal text-white md:text-lg md:leading-8">
-                  <p>
-                    I love challenges and writing code challenges me to the
-                    core.
-                    <br />
-                    In all the duties I have performed, the challenges I
-                    encounter while writing code brings out the best problem
-                    solving and creative skills in me. The most amazing part is
-                    when I solve the problem and I could see the outcome
-                    instantly, it gives me maximum satisfaction because I am
-                    always driven by results. To me, writing code is not just
-                    about making income, it is about craftsmanship and a
-                    craftsman must master his craft as I have mastered the art
-                    of creating user friendly and stunning web apps. Coding and
-                    water sports gives me the same level of adrenaline. It even
-                    feels better because I get paid to write code that impact
-                    people's lives positively.
-                  </p>
-                </blockquote>
-                <figcaption className="mt-6 text-base text-white">
-                  <div className="font-semibold">Michael Gbanya</div>
-                  <div className="mb-3 text-xs">Software developer</div>
-                </figcaption>
-              </figure>
-            </div>
-
-            <div className="md:w-[25rem] md:h-[20rem] flex-shrink-0 relative  md:block">
-              <img
-                src={flyboarding}
-                alt="App screenshot"
-                className="w-full h-full rounded-xl md:rounded-3xl object-contain bg-white/5 shadow-2xl ring-1 ring-white/10"
-              />
-            </div>
-          </div>
+          </motion.div>
         </div>
+      </section>
 
-        <div className=" my-20  ">
-          <h2 className="bg-violet-500 rounded-3xl text-center text-lg font-semibold leading-8 text-white">
-            My Skills and Tools
-          </h2>
+      {/* Skills Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl font-bold text-center mb-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Skills & Tools
+          </motion.h2>
 
-          <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5 flex-shrink-0 ">
-            {skills.map((skill) => (
-              <li
+          <motion.div
+            className="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-7 gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            {skills.map((skill, index) => (
+              <motion.div
                 key={skill.id}
-                className="bg-violet-500/10 w-24 rounded-lg h-18 p-2 flex-col flex-shrink-0 "
+                className="bg-white p-3 rounded-lg shadow hover:shadow-md transition-shadow"
+                whileHover={{ y: -3 }}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
               >
                 <img
-                  className="max-h-12 md:max-h-full w-full object-contain  mb-2"
                   src={skill.img}
-                  alt="Logo images"
+                  alt={skill.title}
+                  className="h-10 w-10 mx-auto mb-2 object-contain"
                 />
-                <p className=" text-sm text-center ">{skill.title}</p>
-              </li>
+                <p className="text-center text-sm font-medium">{skill.title}</p>
+              </motion.div>
             ))}
-          </ul>
+          </motion.div>
         </div>
+      </section>
 
-        <div className="mt-8">
-          <h2 className="bg-violet-500 rounded-3xl text-center text-lg font-semibold leading-8 text-white">
-            Sample Projects
-          </h2>
-          <p className="text-center text-xs text-gray-600">
-            The projects displayed below are samples only which are extracted
-            from the main project and not the complete projects.
-          </p>
+      {/* Projects Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.h2
+            className="text-3xl font-bold text-center mb-12"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            Featured Projects
+          </motion.h2>
 
-          <ul className="mx-auto py-5 flex overflow-y-auto over-x-hidden gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sampleProjects.map((project) => (
-              <Link to={`/project-details/${project.id}`} key={project.id}>
-                <li className=" p-5 bg-gray-400/10 w-screen h-[21rem] md:w-[30rem] rounded-sm  flex-shrink-0 cursor-pointer ">
-                  <div className=" md:text-lg text-center text-gray-600 leading-3">
-                    <div className="flex justify-between items-baseline gap-1 mb-8">
-                      <div className="w-1/3 h-[10rem] flex-shrink-0">
-                        <img
-                          src={project.smallScreenImg}
-                          alt="Screenshot"
-                          className="w-full h-full object-contain"
-                        />
-                        <p className="mt-1 text-xs">Small screen</p>
-                      </div>
-                      <div className="w-2/3 h-[10rem] flex-shrink-0 ">
-                        <img
-                          src={project.bigScreenImg}
-                          alt="Screenshot"
-                          className="w-full h-full object-contain"
-                        />
-                        <p className="mt-1 text-xs">Large screen</p>
-                      </div>
-                    </div>
-
-                    <p className="text-gray-600 mb-2">
-                      Project name: {project.title}
-                    </p>
-                    <p className="text-center font-light text-sm">
-                      {truncate(project.description, project.id)}
-                      <span className="text-blue-500 cursor-pointer">
-                        See more
-                      </span>
-                    </p>
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -5 }}
+                className="bg-white rounded-xl shadow-lg overflow-hidden"
+              >
+                <Link to={`/project-details/${project.id}`}>
+                  <div className="relative aspect-video">
+                    <img
+                      src={project.bigScreenImg}
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
                   </div>
-                  <p className="grid grid-cols-1 justify-center content-center text-center mt-3 text-sm text-black ring-1 ring-violet-500/80 w-5 h-5 py-2 mx-auto bg-white rounded-full">
-                    {project.id}
-                  </p>
-                </li>
-              </Link>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                    <p className="text-gray-600 mb-4">
+                      {truncate(project.description, project.id)}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technology.slice(0, 3).map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                        >
+                          {tech.name}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
-          </ul>
+          </div>
         </div>
-      </main>
-    </>
+      </section>
+    </motion.div>
   );
 }

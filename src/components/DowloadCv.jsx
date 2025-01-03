@@ -42,7 +42,7 @@ export default function DownloadCv() {
   };
   return (
     <>
-      <div className="px-3 py-2 relative text-sm md:text-lg text-gray-500  max-w-2xl mx-auto border-1 border border-violet-500 rounded-lg h-fit pb-10">
+      <div className="px-3 py-2 relative text-sm md:text-lg text-white/80  max-w-2xl mx-auto border-1 border border-violet-500 rounded-lg h-fit pb-10">
         <div className=" ">
           Please read the terms and agree by checking the box below. <br></br> I
           am happy to work with you. Cheers!
@@ -64,7 +64,7 @@ export default function DownloadCv() {
             className="h-4 w-4 rounded border-gray-300 text-violet-600 focus:ring-violet-600"
             onChange={() => setAgreed(!agreed)}
           />
-          <p className="text-xs text-gray-900">
+          <p className="text-xs ">
             Yes, this download is for the reasons stated above.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function DownloadCv() {
           <div className="max-w-md h-fit px-3 rounded-sm absolute z-0 top-30 bottom-100 right-0 left-0">
             {downloadMessage && (
               <div
-                className={`absolute z-10 text-gray-500 mb-3 bg-gray-100 p-3 h-fit rounded-md ring-gray-300 ring-1 shadow-2xl`}
+                className={`absolute z-10 text-white mb-3 bg-gray-100 p-3 h-fit rounded-md ring-gray-300 ring-1 shadow-2xl`}
               >
                 <p className="flex">
                   {downloadMessage}s
