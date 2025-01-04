@@ -3,6 +3,7 @@ FROM node:18-alpine as build
 
 # Set NODE_OPTIONS to increase memory limit
 ENV NODE_OPTIONS="--max-old-space-size=4096"
+ENV NODE_ENV=production
 
 # Install build dependencies
 RUN apk add --no-cache \
@@ -24,9 +25,16 @@ RUN apk add --no-cache \
 
 WORKDIR /app
 
-# Copy package files first (for better caching)
+# Copy package files
 COPY package*.json ./
-RUN npm install
+
+# Install dependencies with specific flags to avoid hanging
+RUN npm set progress=false && \
+    npm config set fund false && \
+    npm config set audit false && \
+    npm config set update-notifier false && \
+    npm install --no-optional --no-audit --no-fund --prefer-offline && \
+    npm install --only=development --no-optional --no-audit --no-fund --prefer-offline
 
 # Copy the entire project including public directory
 COPY . .

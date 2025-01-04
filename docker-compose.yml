@@ -1,13 +1,19 @@
-version: "3"
+version: "3.8"
+
 services:
   portfolio:
-    build: .
-    container_name: my-portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - NODE_ENV=production
+    container_name: portfolio
     restart: unless-stopped
-    ports:
-      - "3001:80"
     networks:
       - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.portfolio.rule=Host(`michael.angia.com.au`)"
 
 networks:
   web:
