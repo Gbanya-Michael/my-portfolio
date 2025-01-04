@@ -6,11 +6,11 @@ ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 WORKDIR /app
 
-# Copy package files
+# Copy package files first (for better caching)
 COPY package*.json ./
 RUN npm install
 
-# Copy all project files including assets
+# Copy the entire project including assets
 COPY . .
 
 # Build the project
