@@ -18,9 +18,21 @@ RUN apk add --no-cache \
     libjpeg-turbo-dev
 
 WORKDIR /app
+
+# Copy package files
 COPY package*.json ./
-RUN npm install
+
+# Install dependencies with specific flags to speed up installation
+RUN npm set progress=false && \
+    npm config set fund false && \
+    npm config set audit false && \
+    npm config set update-notifier false && \
+    npm install --no-optional --prefer-offline
+
+# Copy the rest of the application
 COPY . .
+
+# Build the application
 RUN npm run build
 
 # Production stage
