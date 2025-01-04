@@ -28,13 +28,12 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies with specific flags to avoid hanging
+# Install dependencies with npm ci for more reliable builds
 RUN npm set progress=false && \
     npm config set fund false && \
     npm config set audit false && \
     npm config set update-notifier false && \
-    npm install --no-optional --no-audit --no-fund --prefer-offline && \
-    npm install --only=development --no-optional --no-audit --no-fund --prefer-offline
+    npm ci
 
 # Copy the entire project including public directory
 COPY . .
