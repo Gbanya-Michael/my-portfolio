@@ -1,8 +1,5 @@
-# Build stage
-FROM node:18-alpine as build
-
-# Set NODE_OPTIONS to increase memory limit
-ENV NODE_OPTIONS="--max-old-space-size=4096"
+# Dependencies stage
+FROM node:18-alpine AS deps
 
 # Install build dependencies
 RUN apk add --no-cache \
@@ -18,28 +15,36 @@ RUN apk add --no-cache \
     libjpeg-turbo-dev
 
 WORKDIR /app
-
-# Copy package files
 COPY package*.json ./
 
-# Install dependencies with specific flags to speed up installation
+# Install production dependencies only
 RUN npm set progress=false && \
     npm config set fund false && \
     npm config set audit false && \
     npm config set update-notifier false && \
-    npm install --no-optional --prefer-offline
+    npm ci --only=production --ignore-scripts
 
-# Copy the rest of the application
+# Builder stage
+FROM node:18-alpine AS builder
+
+# Set NODE_OPTIONS to increase memory limit
+ENV NODE_OPTIONS="--max-old-space-size=4096"
+
+WORKDIR /app
+
+# Copy dependencies from deps stage
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build the application
-RUN npm run build
+# Install dev dependencies and build
+RUN npm ci --only=dev && \
+    npm run build
 
 # Production stage
 FROM nginx:alpine
 
-# Copy built assets from build stage
-COPY --from=build /app/dist /usr/share/nginx/html
+# Copy built assets from builder stage
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
