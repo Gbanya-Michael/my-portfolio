@@ -18,7 +18,6 @@ import {
   sqLite,
   graphQL,
   databaseSchema,
-  flyboarding,
   profilePic,
   jobPlusHomeBig,
   jobPlusHomeSmall,
@@ -35,11 +34,8 @@ import {
   bookerHomeBig,
   bookerHomeSmall,
   bookerBookingsBig,
-  bookerBookingsSmall,
   butcherBig,
   butcherSmall,
-  kineticSmall,
-  kineticBig,
 } from "../components/useImage";
 
 const skills = [
@@ -271,7 +267,7 @@ export const sampleProjects = [
     description:
       "Birabook maintains a booking history for businesses, this is also applied to the users. Businesses can revisit activities and bookings over time on the history page. It has added features for filters and sort by date, service, status and attendant which promotes a fast and efficient way to navigate activities.",
     bigScreenImg: bookerBookingsBig,
-    smallScreenImg: bookerBookingsSmall,
+    smallScreenImg: bookerBookingsBig,
     features:
       "This page allows businesses to search for bookings. It also displays previous and advance bookings. I use React State to automatically change the status of appointments. Details are displayed or hidden depending on device size.",
     technology: [
