@@ -58,7 +58,9 @@ export default function ProjectDetails() {
               </div>
 
               <div>
-                <h2 className="text-xl font-semibold text-white mb-3">Features</h2>
+                <h2 className="text-xl font-semibold text-white mb-3">
+                  Features
+                </h2>
                 <p className="text-gray-300 leading-relaxed">
                   {selectedProject.features}
                 </p>
@@ -108,7 +110,9 @@ export default function ProjectDetails() {
               alt="Desktop view"
               className="w-full rounded-lg shadow-lg"
             />
-            <p className="text-center text-gray-400 mt-2 text-sm">Desktop View</p>
+            <p className="text-center text-gray-400 mt-2 text-sm">
+              Desktop View
+            </p>
           </motion.div>
         </motion.div>
       </div>

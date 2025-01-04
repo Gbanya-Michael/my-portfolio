@@ -116,7 +116,6 @@ const skills = [
 export const MAX_CHAR_LENGTH = 52;
 
 export const sampleProjects = [
- 
   {
     id: 2,
     title: "JobPlus",
@@ -393,9 +392,7 @@ export default function HomeContent() {
                 <p className="text-2xl font-light">
                   Full Stack Software Developer
                 </p>
-                <p className="text-xl text-blue-400">
-                  Frontend Focused
-                </p>
+                <p className="text-xl text-blue-400">Frontend Focused</p>
                 <p className="flex items-center justify-center md:justify-start gap-2">
                   <svg
                     className="w-5 h-5"

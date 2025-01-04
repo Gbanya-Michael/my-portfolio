@@ -27,7 +27,10 @@ function App() {
                 <Route path="contact" element={<ContactPage />} />
                 <Route path="about" element={<AboutPage />} />
                 <Route path="community" element={<CommunityPage />} />
-                <Route path="project-details/:id" element={<ProjectDetailsPage />} />
+                <Route
+                  path="project-details/:id"
+                  element={<ProjectDetailsPage />}
+                />
                 <Route path="portfolio" element={<PortfolioPage />} />
               </Routes>
             </Layout>

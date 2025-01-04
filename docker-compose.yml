@@ -7,16 +7,12 @@ services:
       dockerfile: Dockerfile
     container_name: portfolio
     restart: unless-stopped
+    ports:
+      - "8081:80"
     networks:
       - angia-network
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.portfolio.rule=Host(`michael.angia.com.au`)"
-      - "traefik.http.services.portfolio.loadbalancer.server.port=80"
-      - "traefik.http.routers.portfolio.service=portfolio"
-      - "traefik.http.services.portfolio.loadbalancer.passhostheader=true"
 
 networks:
   angia-network:
-    external:
-      name: angia-website_angia-network
+    external: true
+    name: angia-website_angia-network

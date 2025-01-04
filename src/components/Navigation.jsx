@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/portfolio', label: 'Portfolio' },
-    { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' },
-    { path: '/community', label: 'Community' },
-    { path: '/download-cv', label: 'Download CV' },
+    { path: "/", label: "Home" },
+    { path: "/portfolio", label: "Portfolio" },
+    { path: "/about", label: "About" },
+    { path: "/contact", label: "Contact" },
+    { path: "/community", label: "Community" },
+    { path: "/download-cv", label: "Download CV" },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Navigation = () => {
                 to={item.path}
                 className={({ isActive }) =>
                   `hover:text-blue-400 transition-colors ${
-                    isActive ? 'text-blue-500' : ''
+                    isActive ? "text-blue-500" : ""
                   }`
                 }
               >
@@ -43,10 +43,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Navigation Button */}
-          <button
-            className="md:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-          >
+          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
             <svg
               className="w-6 h-6"
               fill="none"
@@ -76,7 +73,7 @@ const Navigation = () => {
                 to={item.path}
                 className={({ isActive }) =>
                   `block py-2 hover:text-blue-400 transition-colors ${
-                    isActive ? 'text-blue-500' : ''
+                    isActive ? "text-blue-500" : ""
                   }`
                 }
                 onClick={() => setIsOpen(false)}
@@ -91,4 +88,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation; 
+export default Navigation;

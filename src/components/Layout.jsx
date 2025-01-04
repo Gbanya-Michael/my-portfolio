@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Navigation from './Navigation';
-import Footer from './Footer';
+import React from "react";
+import { motion } from "framer-motion";
+import Navigation from "./Navigation";
+import Footer from "./Footer";
 
 const Layout = ({ children }) => {
   return (
@@ -20,4 +20,4 @@ const Layout = ({ children }) => {
   );
 };
 
-export default Layout; 
+export default Layout;
