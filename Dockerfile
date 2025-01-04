@@ -4,6 +4,24 @@ FROM node:18-alpine as build
 # Set NODE_OPTIONS to increase memory limit
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
+# Install build dependencies
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    gcc \
+    libc-dev \
+    autoconf \
+    automake \
+    libtool \
+    nasm \
+    tiff \
+    jpeg \
+    zlib \
+    zlib-dev \
+    file \
+    pkgconf
+
 WORKDIR /app
 
 # Copy package files first (for better caching)
