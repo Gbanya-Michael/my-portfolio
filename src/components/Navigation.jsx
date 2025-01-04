@@ -9,9 +9,7 @@ const Navigation = () => {
     { path: "/", label: "Home" },
     { path: "/portfolio", label: "Portfolio" },
     { path: "/about", label: "About" },
-    { path: "/contact", label: "Contact" },
     { path: "/community", label: "Community" },
-    { path: "/download-cv", label: "Download CV" },
   ];
 
   return (

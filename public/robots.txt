@@ -1,0 +1,10 @@
+# https://michael.angia.com.au/robots.txt
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://michael.angia.com.au/sitemap.xml
+
+# Routes that should not be crawled
+Disallow: /entry-terms
+Disallow: /project-details/* 

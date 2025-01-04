@@ -1,17 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { linkedIn, gitLogo } from "./useImage";
 
 const LINKEDIN_URL = import.meta.env.VITE_LINKEDIN_URL;
 const GITHUB_URL = import.meta.env.VITE_GITHUB_URL;
+
 const navigation = {
+  main: [
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "About", href: "/about" },
+    { name: "Community", href: "/community" },
+  ],
   social: [
     {
       name: "LinkedIn",
       href: LINKEDIN_URL,
       icon: linkedIn,
     },
-
     {
       name: "GitHub",
       href: GITHUB_URL,
@@ -22,38 +27,50 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white mt-24">
-      <nav
-        className="-mb-6 columns-2 gap-10 flex justify-center "
-        aria-label="Footer"
-      >
-        <div className="pb-6">
-          <Link
-            to="/download-cv"
-            className="text-sm px-5 leading-6 text-gray-600 hover:text-gray-900 hover:underline"
-          >
-            Download my CV
-          </Link>
+    <footer className="bg-gradient-to-t from-gray-900 via-gray-800 to-transparent">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between">
+        <nav className="flex justify-center space-x-6" aria-label="Footer">
+          {navigation.main.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              className="text-sm leading-6 text-gray-300 hover:text-blue-400 transition-colors duration-300"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="mt-8 md:mt-0 flex justify-center space-x-6">
+          {navigation.social.map((item) => (
+            <Link
+              key={item.name}
+              to={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/25 p-2 rounded-full hover:bg-white/40 transition-all duration-300"
+            >
+              <span className="sr-only">{item.name}</span>
+              <img
+                src={item.icon}
+                alt={`${item.name} Logo`}
+                className="h-5 w-5 object-contain"
+              />
+            </Link>
+          ))}
         </div>
-      </nav>
-      <div className="mt-10 flex justify-center gap-10">
-        {navigation.social.map((item) => (
-          <Link
-            key={item.name}
-            to={item.href}
-            className="text-gray-400 hover:text-gray-500"
-          >
-            <img
-              src={item.icon}
-              alt="Logo"
-              className="w-6 h-6 object-contain"
-            />
-          </Link>
-        ))}
       </div>
-      <p className="py-10 text-center text-xs leading-5 text-gray-500">
-        &copy; Michael Gbanya 2023. All rights reserved.
-      </p>
+
+      <div className="border-t border-white/10 mt-8">
+        <div className="mx-auto max-w-7xl px-6 py-8">
+          <p className="text-center text-sm text-gray-400">
+            &copy; {new Date().getFullYear()} Michael Gbanya. Software Developer based in Sydney, Australia.
+          </p>
+          <p className="text-center text-xs text-gray-500 mt-2">
+            Built with JavaScript, React, TailwindCSS, and Framer Motion
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }

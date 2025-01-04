@@ -5,6 +5,7 @@ import { code } from "./useImage";
 import { useSessionStorage } from "./useSessionStorage";
 import { useNavigate } from "react-router-dom";
 import { useStorage } from "../StorageContext";
+
 const terms = [
   {
     paragraph:
@@ -18,7 +19,6 @@ const terms = [
     paragraph:
       "The contents on this website shall be used for legal purposes only.",
   },
-
   {
     paragraph:
       "By continuing, you agree that my details, including images and documents will not be used without seeking my consent.",
@@ -29,13 +29,16 @@ export default function EntryTerms() {
   const [welcomeNotice, setWelcomeNotice] = useState(true);
   const [agreed, setAgreed] = useState(false);
   const { getSessionStorage, saveSessionStorage } = useSessionStorage();
-
   const navigate = useNavigate();
   const { setIsAllowed } = useStorage();
 
   useEffect(() => {
     const hasAgreed = getSessionStorage();
-
+    // If terms are already accepted, redirect to home
+    if (hasAgreed) {
+      navigate("/", { replace: true });
+      return;
+    }
     setAgreed(hasAgreed);
     setWelcomeNotice(!hasAgreed);
   }, []);
