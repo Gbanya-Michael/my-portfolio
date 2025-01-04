@@ -1,4 +1,4 @@
-name: Deploy Portfolio to Production
+name: Deploy to Production
 
 on:
   push:
@@ -44,27 +44,22 @@ jobs:
           ssh root@$DROPLET_IP << 'ENDSSH'
             set -e  # Exit on error
             
-            # Navigate to portfolio directory
-            echo "Navigating to portfolio directory..."
+            # Navigate to project directory
+            echo "Navigating to project directory..."
             cd /root/my-portfolio
             
             # Update code
             echo "Pulling latest changes..."
             git pull origin main
             
-            # Clean up Docker resources (excluding network)
+            # Clean up Docker resources
             echo "Cleaning up Docker resources..."
-            docker container prune -f
-            docker image prune -f
-            
-            # Create Docker network if it doesn't exist
-            echo "Creating Docker network if it doesn't exist..."
-            docker network create web || true
+            docker system prune -f
             
             # Start the application
             echo "Starting application..."
             docker-compose down || true
             docker-compose up --build -d
             
-            echo "Portfolio deployment completed successfully!"
+            echo "Deployment completed successfully!"
           ENDSSH

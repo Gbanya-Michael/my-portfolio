@@ -2,11 +2,7 @@ version: "3.8"
 
 services:
   portfolio:
-    build:
-      context: .
-      dockerfile: Dockerfile
-      args:
-        - NODE_ENV=production
+    build: .
     container_name: portfolio
     restart: unless-stopped
     networks:
