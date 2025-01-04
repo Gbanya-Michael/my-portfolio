@@ -3,7 +3,7 @@ FROM node:18-alpine as build
 
 # Set NODE_OPTIONS to increase memory limit
 ENV NODE_OPTIONS="--max-old-space-size=4096"
-ENV NODE_ENV=production
+ENV NODE_ENV=development
 
 # Install build dependencies
 RUN apk add --no-cache \
@@ -28,19 +28,18 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies with npm ci for more reliable builds
+# Install dependencies including devDependencies
 RUN npm set progress=false && \
     npm config set fund false && \
     npm config set audit false && \
     npm config set update-notifier false && \
-    npm ci && \
-    npm install -g vite
+    npm install
 
 # Copy the entire project including public directory
 COPY . .
 
-# Build the project using npx to ensure vite is found
-RUN npx vite build
+# Build the project
+RUN npm run build
 
 # Production stage
 FROM nginx:alpine
