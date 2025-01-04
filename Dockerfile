@@ -4,6 +4,19 @@ FROM node:18-alpine as build
 # Set NODE_OPTIONS to increase memory limit
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
+# Install build dependencies
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    gcc \
+    autoconf \
+    automake \
+    libtool \
+    nasm \
+    libpng-dev \
+    libjpeg-turbo-dev
+
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
