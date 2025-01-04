@@ -1,0 +1,65 @@
+name: Deploy Portfolio to Production
+
+on:
+  push:
+    branches: [main]
+
+env:
+  REPO_NAME: my-portfolio
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add host key
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.DROPLET_IP }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to Digital Ocean
+        env:
+          DROPLET_IP: ${{ secrets.DROPLET_IP }}
+        run: |
+          ssh root@$DROPLET_IP << 'ENDSSH'
+            set -e  # Exit on error
+            
+            # Navigate to portfolio directory
+            echo "Navigating to portfolio directory..."
+            cd /root/my-portfolio
+            
+            # Update code
+            echo "Pulling latest changes..."
+            git pull origin main
+            
+            # Clean up Docker resources
+            echo "Cleaning up Docker resources..."
+            docker system prune -f
+            
+            # Start the application
+            echo "Starting application..."
+            docker-compose down || true
+            docker-compose up --build -d
+            
+            echo "Portfolio deployment completed successfully!"
+          ENDSSH
