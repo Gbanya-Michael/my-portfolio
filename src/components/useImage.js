@@ -39,8 +39,6 @@ import bookerHomeSmall from "../assets/images/bookerHomeSmall.png";
 import bookerFinBig from "../assets/images/bookerFinBig.png";
 import bookerFinSmall from "../assets/images/bookerFinSmall.png";
 import bookerBookingsBig from "../assets/images/bookerBookingsBig.png";
-// Only include bookerBookingsSmall if the file exists
-// import bookerBookingsSmall from "../assets/images/bookerBookingsSmall.png";
 import butcherBig from "../assets/images/butcherBig.png";
 import butcherSmall from "../assets/images/butcherSmall.png";
 import kineticSmall from "../assets/images/kineticSmall.png";
