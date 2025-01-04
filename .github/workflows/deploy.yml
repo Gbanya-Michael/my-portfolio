@@ -52,6 +52,10 @@ jobs:
             echo "Pulling latest changes..."
             git pull origin main
             
+            # Create Docker network if it doesn't exist
+            echo "Creating Docker network if it doesn't exist..."
+            docker network create web || true
+            
             # Clean up Docker resources
             echo "Cleaning up Docker resources..."
             docker system prune -f
