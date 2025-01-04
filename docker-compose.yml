@@ -6,11 +6,12 @@ services:
     container_name: portfolio
     restart: unless-stopped
     networks:
-      - web
+      - angia-network
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portfolio.rule=Host(`michael.angia.com.au`)"
 
 networks:
-  web:
-    external: true
+  angia-network:
+    external:
+      name: angia-website_angia-network
