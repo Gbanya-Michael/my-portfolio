@@ -10,7 +10,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 
-# Copy the entire project including assets
+# Copy the entire project including public directory
 COPY . .
 
 # Build the project

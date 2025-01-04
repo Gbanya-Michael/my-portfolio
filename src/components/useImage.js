@@ -1,70 +1,75 @@
-import code from "../assets/images/code.png";
-
-// Skills Images
-import javaScriptLogo from "../assets/images/javaScriptLogo.png";
-import reactLogo from "../assets/images/reactLogo.png";
-import typeScriptLogo from "../assets/images/typeScriptLogo.png";
-import htmlLogo from "../assets/images/htmlLogo.png";
-import tailwindCssLogo from "../assets/images/tailwindCssLogo.png";
-import sassLogo from "../assets/images/sassLogo.png";
-import nodeLogo from "../assets/images/node.png";
-import gitLogo from "../assets/images/gitLogo.png";
-import figmaLogo from "../assets/images/figmaLogo.png";
-import cssLogo from "../assets/images/cssLogo.png";
-import awsLogo from "../assets/images/awsLogo.png";
-import sqLite from "../assets/images/sqLite.png";
-import slack from "../assets/images/slack.png";
-import graphQL from "../assets/images/graphQL.png";
-import linkedIn from "../assets/images/linkedIn.png";
-import databaseSchema from "../assets/images/databaseSchema.png";
-
-// Personal Images
-import waterBackground from "../assets/images/waterBackground.jpeg";
-import personal1 from "../assets/images/personal1.jpeg";
-import profilePic from "../assets/images/profilePic.png";
-import flyboarding from "../assets/images/flyboarding.gif";
-// Projects
-import jobPlusHomeBig from "../assets/images/jobPlusHomeBig.png";
-import jobPlusHomeSmall from "../assets/images/jobPlusHomeSmall.png";
-import jobPluListingBig from "../assets/images/jobPlusListingBig.png";
-import jobPlusListingSmall from "../assets/images/jobPlusListingSmall.png";
-import jobPlusRegBig from "../assets/images/jobPlusRegBig.png";
-import jobPlusRegSmall from "../assets/images/jobPlusRegSmall.png";
-import bookerDashBig from "../assets/images/bookerDashBig.png";
-import bookerCheckoutBig from "../assets/images/bookerCheckoutBig.png";
-import bookerCheckoutSmall from "../assets/images/bookerCheckoutSmall.png";
-import bookerDashSmall from "../assets/images/bookerDashSmall.png";
-import bookerHomeBig from "../assets/images/bookerHomeBig.png";
-import bookerHomeSmall from "../assets/images/bookerHomeSmall.png";
-import bookerFinBig from "../assets/images/bookerFinBig.png";
-import bookerFinSmall from "../assets/images/bookerFinSmall.png";
-import bookerBookingsBig from "../assets/images/bookerBookingsBig.png";
-import butcherBig from "../assets/images/butcherBig.png";
-import butcherSmall from "../assets/images/butcherSmall.png";
-import kineticSmall from "../assets/images/kineticSmall.png";
-import kineticBig from "../assets/images/kineticBig.png";
-
-import Admin1Gif from "../assets/images/jobplusAdmin2.gif";
-import Admin2Gif from "../assets/images/jobplusAdmin1.gif";
-import jobplusFrontend1 from "../assets/images/jobplusFrontend1.gif";
-
-//Community outreach
-import covid1 from "../assets/images/covid1.png";
-import covid2 from "../assets/images/covid2.png";
-import marikina2 from "../assets/images/marikina2.jpeg";
-import marikina3 from "../assets/images/marikina3.jpeg";
-import marikina4 from "../assets/images/marikina4.jpeg";
-import marikina5 from "../assets/images/marikina5.jpeg";
-import saintRita1 from "../assets/images/saintRita1.png";
-import saintRita2 from "../assets/images/saintRita2.png";
-import saintRita3 from "../assets/images/saintRita3.png";
-import saintRita4 from "../assets/images/saintRita4.png";
-
-export {
-  linkedIn,
+// All paths now start from root
+const images = {
   // Background image
+  code: "/images/code.png",
+
+  // Skills Images
+  javaScriptLogo: "/images/javaScriptLogo.png",
+  reactLogo: "/images/reactLogo.png",
+  typeScriptLogo: "/images/typeScriptLogo.png",
+  htmlLogo: "/images/htmlLogo.png",
+  tailwindCssLogo: "/images/tailwindCssLogo.png",
+  sassLogo: "/images/sassLogo.png",
+  nodeLogo: "/images/node.png",
+  gitLogo: "/images/gitLogo.png",
+  figmaLogo: "/images/figmaLogo.png",
+  cssLogo: "/images/cssLogo.png",
+  awsLogo: "/images/awsLogo.png",
+  sqLite: "/images/sqLite.png",
+  slack: "/images/slack.png",
+  graphQL: "/images/graphQL.png",
+  linkedIn: "/images/linkedIn.png",
+  databaseSchema: "/images/databaseSchema.png",
+
+  // Personal Images
+  waterBackground: "/images/waterBackground.jpeg",
+  personal1: "/images/personal1.jpeg",
+  profilePic: "/images/profilePic.png",
+  flyboarding: "/images/flyboarding.gif",
+
+  // Projects
+  jobPlusHomeBig: "/images/jobPlusHomeBig.png",
+  jobPlusHomeSmall: "/images/jobPlusHomeSmall.png",
+  jobPluListingBig: "/images/jobPlusListingBig.png",
+  jobPlusListingSmall: "/images/jobPlusListingSmall.png",
+  jobPlusRegBig: "/images/jobPlusRegBig.png",
+  jobPlusRegSmall: "/images/jobPlusRegSmall.png",
+  bookerDashBig: "/images/bookerDashBig.png",
+  bookerCheckoutBig: "/images/bookerCheckoutBig.png",
+  bookerCheckoutSmall: "/images/bookerCheckoutSmall.png",
+  bookerDashSmall: "/images/bookerDashSmall.png",
+  bookerHomeBig: "/images/bookerHomeBig.png",
+  bookerHomeSmall: "/images/bookerHomeSmall.png",
+  bookerFinBig: "/images/bookerFinBig.png",
+  bookerFinSmall: "/images/bookerFinSmall.png",
+  bookerBookingsBig: "/images/bookerBookingsBig.png",
+  bookerBookingsSmall: "/images/bookerBookingsSmall.png",
+  butcherBig: "/images/butcherBig.png",
+  butcherSmall: "/images/butcherSmall.png",
+  kineticSmall: "/images/kineticSmall.png",
+  kineticBig: "/images/kineticBig.png",
+
+  // GIFs
+  Admin1Gif: "/images/jobplusAdmin2.gif",
+  Admin2Gif: "/images/jobplusAdmin1.gif",
+  jobplusFrontend1: "/images/jobplusFrontend1.gif",
+
+  // Community outreach
+  covid1: "/images/covid1.png",
+  covid2: "/images/covid2.png",
+  marikina2: "/images/marikina2.jpeg",
+  marikina3: "/images/marikina3.jpeg",
+  marikina4: "/images/marikina4.jpeg",
+  marikina5: "/images/marikina5.jpeg",
+  saintRita1: "/images/saintRita1.png",
+  saintRita2: "/images/saintRita2.png",
+  saintRita3: "/images/saintRita3.png",
+  saintRita4: "/images/saintRita4.png",
+};
+
+export const {
+  linkedIn,
   code,
-  // Skills images
   javaScriptLogo,
   reactLogo,
   typeScriptLogo,
@@ -80,14 +85,10 @@ export {
   sqLite,
   graphQL,
   databaseSchema,
-
-  // Personal images
   waterBackground,
   personal1,
   profilePic,
   flyboarding,
-
-  // Project Samples
   jobPlusHomeBig,
   jobPlusHomeSmall,
   jobPluListingBig,
@@ -111,8 +112,6 @@ export {
   Admin2Gif,
   kineticBig,
   kineticSmall,
-
-  //Community outreach
   covid1,
   covid2,
   marikina2,
@@ -123,4 +122,4 @@ export {
   saintRita2,
   saintRita3,
   saintRita4,
-};
+} = images;
