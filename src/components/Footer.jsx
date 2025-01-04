@@ -43,9 +43,9 @@ export default function Footer() {
 
         <div className="mt-8 md:mt-0 flex justify-center space-x-6">
           {navigation.social.map((item) => (
-            <Link
+            <a
               key={item.name}
-              to={item.href}
+              href={item.href}
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white/25 p-2 rounded-full hover:bg-white/40 transition-all duration-300"
@@ -56,7 +56,7 @@ export default function Footer() {
                 alt={`${item.name} Logo`}
                 className="h-5 w-5 object-contain"
               />
-            </Link>
+            </a>
           ))}
         </div>
       </div>

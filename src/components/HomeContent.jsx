@@ -36,6 +36,7 @@ import {
   bookerBookingsBig,
   butcherBig,
   butcherSmall,
+  linkedIn,
 } from "../components/useImage";
 
 const skills = [
@@ -315,13 +316,16 @@ const recentProjects = [
   {
     title: "BiraBook",
     url: "https://birabook.com",
-    description: "Appointment Booking System",
+    description: "Appointment Management System",
   },
   {
     title: "JobPlus",
     url: "https://github.com/Gbanya-Michael/Jobplus-Fullstack",
   },
 ];
+
+const LINKEDIN_URL = import.meta.env.VITE_LINKEDIN_URL;
+const GITHUB_URL = import.meta.env.VITE_GITHUB_URL;
 
 export default function HomeContent() {
   return (
@@ -375,7 +379,7 @@ export default function HomeContent() {
               </motion.div>
 
               <motion.h1
-                className="text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-400 mb-4"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-blue-400 mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
@@ -389,13 +393,15 @@ export default function HomeContent() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                <p className="text-2xl font-light">
+                <p className="text-xl md:text-2xl font-light">
                   Full Stack Software Developer
                 </p>
-                <p className="text-xl text-blue-400">Frontend Focused</p>
-                <p className="flex items-center justify-center md:justify-start gap-2">
+                <p className="text-lg md:text-xl text-blue-400">
+                  Frontend Focused
+                </p>
+                <p className="flex items-center justify-center md:justify-start gap-2 text-sm md:text-base">
                   <svg
-                    className="w-5 h-5"
+                    className="w-4 h-4 md:w-5 md:h-5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                   >
@@ -407,6 +413,52 @@ export default function HomeContent() {
                   </svg>
                   Sydney, Australia
                 </p>
+
+                {/* Social Links */}
+                <motion.div
+                  className="flex justify-center md:justify-start gap-3 md:gap-4 mt-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 }}
+                >
+                  <motion.a
+                    href={LINKEDIN_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center gap-1 px-1 md:px-2 py-1 bg-gradient-to-r from-blue-900 to-blue-600 rounded-lg hover:from-blue-900 hover:to-blue-400 transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <img
+                      src={linkedIn}
+                      alt="LinkedIn"
+                      className="w-4 h-4 md:w-5 md:h-5"
+                    />
+                    <span className="text-white text-xs md:text-sm font-medium whitespace-nowrap">
+                      Connect on LinkedIn
+                    </span>
+                    <div className="absolute inset-0 bg-white/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.a>
+
+                  <motion.a
+                    href={GITHUB_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative flex items-center gap-1 px-1 md:px-2 py-1 bg-gradient-to-r from-gray-600 to-gray-800 rounded-lg hover:from-gray-900 hover:to-gray-400 transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <img
+                      src={gitLogo}
+                      alt="GitHub"
+                      className="w-4 h-4 md:w-5 md:h-5"
+                    />
+                    <span className="text-white text-xs md:text-sm font-medium whitespace-nowrap">
+                      View GitHub
+                    </span>
+                    <div className="absolute inset-0 bg-white/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </motion.a>
+                </motion.div>
               </motion.div>
             </motion.div>
 
@@ -543,7 +595,7 @@ export default function HomeContent() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.h2
-            className="text-3xl font-bold text-center mb-12"
+            className="text-3xl text-gray-300 font-bold text-center mb-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}

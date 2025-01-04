@@ -47,10 +47,10 @@ export default function Community() {
   return (
     <>
       <div>
-        <h1 className="mt-5 md:mt-10 mb-3 md:mb-5 bg-gray-300 rounded-md text-center text-xs md:text-lg font-semibold leading-8 text-black/60">
+        <h1 className="mt-5 md:mt-10 mb-3 md:mb-5 bg-gray-300 rounded-md text-center text-xs md:text-lg font-semibold leading-8 text-gray-800">
           Corporate Social Responsibility & Community Outreach
         </h1>
-        <div className="px-3 text-gray-500 text-xs md:text-lg">
+        <div className="px-3 text-gray-400 text-xs md:text-lg">
           <p>
             Being a developer brings out the best in me, likewise belonging to
             the community brings me closer to the people.
@@ -77,7 +77,7 @@ export default function Community() {
                   />
                 ))}
               </div>
-              <p className=" text-start font-light text-sm mb-8">{gal.title}</p>
+              <p className=" text-start text-gray-400 font-light text-sm mb-8">{gal.title}</p>
             </li>
           ))}
         </ul>
