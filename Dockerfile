@@ -33,13 +33,14 @@ RUN npm set progress=false && \
     npm config set fund false && \
     npm config set audit false && \
     npm config set update-notifier false && \
-    npm ci
+    npm ci && \
+    npm install -g vite
 
 # Copy the entire project including public directory
 COPY . .
 
-# Build the project
-RUN npm run build
+# Build the project using npx to ensure vite is found
+RUN npx vite build
 
 # Production stage
 FROM nginx:alpine
