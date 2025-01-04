@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Don't ignore image assets
+!src/assets/images/*.png
+!src/assets/images/*.jpg
+!src/assets/images/*.jpeg

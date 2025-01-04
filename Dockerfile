@@ -5,9 +5,15 @@ FROM node:18-alpine as build
 ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 WORKDIR /app
+
+# Copy package files
 COPY package*.json ./
 RUN npm install
+
+# Copy all project files including assets
 COPY . .
+
+# Build the project
 RUN npm run build
 
 # Production stage
