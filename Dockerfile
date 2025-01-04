@@ -17,15 +17,28 @@ RUN apk add --no-cache \
 WORKDIR /app
 COPY package*.json ./
 
-# Install production dependencies only
+# Install all dependencies
 RUN npm set progress=false && \
     npm config set fund false && \
     npm config set audit false && \
     npm config set update-notifier false && \
-    npm ci --only=production --ignore-scripts
+    npm ci
 
 # Builder stage
 FROM node:18-alpine AS builder
+
+# Install the same build dependencies
+RUN apk add --no-cache \
+    python3 \
+    make \
+    g++ \
+    gcc \
+    autoconf \
+    automake \
+    libtool \
+    nasm \
+    libpng-dev \
+    libjpeg-turbo-dev
 
 # Set NODE_OPTIONS to increase memory limit
 ENV NODE_OPTIONS="--max-old-space-size=4096"
@@ -36,9 +49,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Install dev dependencies and build
-RUN npm ci --only=dev && \
-    npm run build
+# Build the application
+RUN npm run build
 
 # Production stage
 FROM nginx:alpine
