@@ -308,19 +308,19 @@ export const truncate = (description, projectId) => {
 
 const recentProjects = [
   {
-    title: "Angia Technologies",
-    url: "https://angia.com.au",
-    description: "Software Development Company",
-  },
-
-  {
     title: "BiraBook",
     url: "https://birabook.com",
-    description: "Appointment Management System",
+    description: "Appointment Management System and Market Place",
   },
   {
-    title: "JobPlus",
-    url: "https://github.com/Gbanya-Michael/Jobplus-Fullstack",
+    title: "lotsApark",
+    url: "https://lotspark.com",
+    description: "Parking Space Management and Rental System",
+  },
+  {
+    title: "Angia Technologies",
+    url: "https://angia.com.au",
+    description: "Software Development Company Website",
   },
 ];
 
@@ -394,10 +394,10 @@ export default function HomeContent() {
                 transition={{ delay: 0.3 }}
               >
                 <p className="text-xl md:text-2xl font-light">
-                  Full Stack Software Developer
+                  Software Engineer
                 </p>
                 <p className="text-lg md:text-xl text-blue-400">
-                  Frontend Focused
+                  JavaScript, React, TypeScript, Ruby, Node.js
                 </p>
                 <p className="flex items-center justify-center md:justify-start gap-2 text-sm md:text-base">
                   <svg

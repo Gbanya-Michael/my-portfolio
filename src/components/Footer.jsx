@@ -64,11 +64,9 @@ export default function Footer() {
       <div className="border-t border-white/10 mt-8">
         <div className="mx-auto max-w-7xl px-6 py-8">
           <p className="text-center text-sm text-gray-400">
-            &copy; {new Date().getFullYear()} Michael Gbanya. Software Developer based in Sydney, Australia.
+            &copy; {new Date().getFullYear()} Michael Gbanya. Software Engineer based in Sydney, Australia.
           </p>
-          <p className="text-center text-xs text-gray-500 mt-2">
-            Built with JavaScript, React, TailwindCSS, and Framer Motion
-          </p>
+       
         </div>
       </div>
     </footer>
