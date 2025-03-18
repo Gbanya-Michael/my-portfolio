@@ -314,7 +314,7 @@ const recentProjects = [
   },
   {
     title: "lotsApark",
-    url: "https://lotspark.com",
+    url: "https://lotsapark.com",
     description: "Parking Space Management and Rental System",
   },
   {
