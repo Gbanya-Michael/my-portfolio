@@ -308,15 +308,16 @@ export const truncate = (description, projectId) => {
 
 const recentProjects = [
   {
+    title: "LotsaPark",
+    url: "https://lotsapark.com",
+    description: "Parking Space Management and Rental System",
+  },
+  {
     title: "BiraBook",
     url: "https://birabook.com",
     description: "Appointment Management System and Market Place",
   },
-  {
-    title: "lotsApark",
-    url: "https://lotsapark.com",
-    description: "Parking Space Management and Rental System",
-  },
+
   {
     title: "Angia Technologies",
     url: "https://angia.com.au",
@@ -411,7 +412,7 @@ export default function HomeContent() {
                       clipRule="evenodd"
                     />
                   </svg>
-                  Sydney, Australia
+                  Melbourne, Australia
                 </p>
 
                 {/* Social Links */}
